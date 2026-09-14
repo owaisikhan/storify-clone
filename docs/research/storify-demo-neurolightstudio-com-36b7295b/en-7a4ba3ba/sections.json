@@ -1,0 +1,146 @@
+[
+  {
+    "name": "header",
+    "top": 36,
+    "height": 124,
+    "heading": "",
+    "cls": "w-full [&_button]:cursor-pointer bg-background shadow-[0_2px_10px_rgba(15,23,42,0.06)] dark:shadow-[0_2px_10px_rgba(0,0,",
+    "bytes": 17342,
+    "text": "Deliver toSet locationAll CategoriesWelcomeLogin / RegisterAll CategoriesCollectionsProductsBrandsTrack OrderBlogContact UsBecome a VendorDeliver toSet location"
+  },
+  {
+    "name": "section-1",
+    "top": 160,
+    "height": 588,
+    "heading": "Go All in on\nBig Screen Action",
+    "cls": "py-4 lg:py-6",
+    "bytes": 42908,
+    "text": "AccessoriesAppliancesCameras & Smart HomeGamingLaptops. Tablets & PCMobile PhonesPC PartsTV & AudioWearable TechnologyAccessoriesAppliancesCameras & Smart HomeGamingLaptops. Tablets & PCMobile PhonesP"
+  },
+  {
+    "name": "section-2",
+    "top": 748,
+    "height": 148,
+    "heading": "",
+    "cls": "py-4 lg:py-8",
+    "bytes": 22827,
+    "text": ""
+  },
+  {
+    "name": "section-3",
+    "top": 896,
+    "height": 348,
+    "heading": "Shop by Categories",
+    "cls": "py-5 lg:py-8",
+    "bytes": 37439,
+    "text": "Shop by CategoriesAccessoriesAppliancesCameras & Smart HomeGamingLaptops. Tablets & PCMobile PhonesPC PartsTV & AudioWearable Technology"
+  },
+  {
+    "name": "section-4",
+    "top": 1269,
+    "height": 516,
+    "heading": "",
+    "cls": "py-4 lg:py-6",
+    "bytes": 8354,
+    "text": ""
+  },
+  {
+    "name": "section-5",
+    "top": 1810,
+    "height": 660,
+    "heading": "Top Selling",
+    "cls": "py-5 lg:py-8",
+    "bytes": 76926,
+    "text": "Top SellingFeaturedNew ArrivalsOn SaleFeaturedQuick viewSony PlayStation Portal Remote Player for PS5 ConsolePrice on requestRequest a quotePre-orderFeaturedChoose optionsQuick viewiPad mini 7Blue$700"
+  },
+  {
+    "name": "section-6",
+    "top": 2470,
+    "height": 769,
+    "heading": "Deals",
+    "cls": "py-5 lg:py-8",
+    "bytes": 42347,
+    "text": "Today's FeaturedDealsUp to 17% offEnds in10 Days, 21 Hours, 40 Mins, 27 Secs10Days:21Hours:40Mins:27SecsDays10Hours21Mins40Secs27View All Deals-2%AccessoriesDJI Air 3S Fly More Combo With DJI RC 2 Rem"
+  },
+  {
+    "name": "section-7",
+    "top": 3239,
+    "height": 100,
+    "heading": "Top Collections",
+    "cls": "pt-6 lg:pt-10",
+    "bytes": 324,
+    "text": "Top Collections"
+  },
+  {
+    "name": "section-8",
+    "top": 3339,
+    "height": 1411,
+    "heading": "iPhones",
+    "cls": "py-6 lg:py-10",
+    "bytes": 120223,
+    "text": "iPhonesBuy NowFeaturedChoose optionsQuick viewiPhone 17Black$1,000.00-17%Choose optionsQuick viewiPhone 16 Pro MaxDesert Titanium$1,000.00$1,200.00-20%Choose optionsQuick viewiPhone 17 Pro MaxCosmic O"
+  },
+  {
+    "name": "section-9",
+    "top": 4749,
+    "height": 504,
+    "heading": "MacBook Pro",
+    "cls": "py-5 lg:py-8",
+    "bytes": 5840,
+    "text": "MacBook ProMarket-specific assortments balancing contemporary styling, comfort, durability.Shop Now"
+  },
+  {
+    "name": "section-10",
+    "top": 5253,
+    "height": 4973,
+    "heading": "Find your favorite products.",
+    "cls": "py-6 lg:py-12",
+    "bytes": 450396,
+    "text": "Find your favorite products.All ItemsFilterAll ItemsAccessoriesAppliancesCameras & Smart HomeGamingGoogleIphoneLaptops. Tablets & PCFilterFeaturedQuick viewSony PlayStation Portal Remote Player for PS"
+  },
+  {
+    "name": "section-11",
+    "top": 10226,
+    "height": 181,
+    "heading": "Get 15% off",
+    "cls": "py-5 lg:py-8",
+    "bytes": 3124,
+    "text": "Get 15% offUse coupon code at checkout · Ends Nov 25TECH15Copy codeShop Now"
+  },
+  {
+    "name": "section-12",
+    "top": 10407,
+    "height": 525,
+    "heading": "Top Vendors",
+    "cls": "py-5 lg:py-8",
+    "bytes": 33530,
+    "text": "Top VendorsPixel Forge ComputingPixel Forge Computing provides laptops, desktop components, gaming accessories and reliable computing equipment for work and entertainment.5.0rating1sold$$$PriceGo to S"
+  },
+  {
+    "name": "section-13",
+    "top": 10932,
+    "height": 461,
+    "heading": "Start Selling With Us Today",
+    "cls": "py-6 lg:py-10",
+    "bytes": 3764,
+    "text": "Start Selling With Us TodayJoin our marketplace, manage products easily, accept secure payments, and grow your business faster.Become a Vendor"
+  },
+  {
+    "name": "section-14",
+    "top": 11452,
+    "height": 595,
+    "heading": "Top Articles",
+    "cls": "py-5 lg:py-10",
+    "bytes": 22858,
+    "text": "Top ArticlesAll ArticlesEssential Gadgets for Your Home OfficeDiscover must-have gadgets that boost productivity and comfort in your home office, from ergonomic accessories to smart devices for any re"
+  },
+  {
+    "name": "footer",
+    "top": 12047,
+    "height": 362,
+    "heading": "",
+    "cls": "border-t bg-muted/30 text-foreground",
+    "bytes": 6616,
+    "text": "Multi-vendor E-commerce PlatformContact+1 555-0100support@storify.com123 Main Street, New York, NY 10001ProductsProductsCategoriesBrandsCollectionsNew ArrivalsHelpTrack OrderFAQReturnsContactCompanyBl"
+  }
+]

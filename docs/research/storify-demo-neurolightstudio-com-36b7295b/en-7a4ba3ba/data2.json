@@ -1,0 +1,1361 @@
+{
+  "hero": {
+    "categories": [
+      {
+        "label": "Accessories",
+        "href": "/en/categories/accessories",
+        "icon": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788002791557-7oqcj0/ChatGPT_Image_Aug_29__2026__05_26_03_PM.webp"
+      },
+      {
+        "label": "Appliances",
+        "href": "/en/categories/appliances",
+        "icon": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787916336167-1iyvjw/ChatGPT_Image_Aug_20__2026__11_54_56_AM.webp"
+      },
+      {
+        "label": "Cameras & Smart Home",
+        "href": "/en/categories/cameras-smart-home",
+        "icon": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787915969832-qfjsj8/ChatGPT_Image_Aug_19__2026__11_12_01_AM.webp"
+      },
+      {
+        "label": "Gaming",
+        "href": "/en/categories/gaming",
+        "icon": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787916056736-fqsi5u/ChatGPT_Image_Aug_20__2026__12_43_23_PM.webp"
+      },
+      {
+        "label": "Laptops. Tablets & PC",
+        "href": "/en/categories/laptops-tablets-pc",
+        "icon": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787915882259-rqqaqq/ChatGPT_Image_Aug_19__2026__04_49_49_PM.webp"
+      },
+      {
+        "label": "Mobile Phones",
+        "href": "/en/categories/mobile-phones",
+        "icon": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787887860046-pff58a/ChatGPT_Image_Aug_28__2026__08_44_21_AM.webp"
+      },
+      {
+        "label": "PC Parts",
+        "href": "/en/categories/pc-parts",
+        "icon": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787916660319-f3morw/ChatGPT_Image_Aug_19__2026__01_01_29_PM.webp"
+      },
+      {
+        "label": "TV & Audio",
+        "href": "/en/categories/tv-audio",
+        "icon": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787916110749-jhcbm7/ChatGPT_Image_Aug_19__2026__09_56_38_PM.webp"
+      },
+      {
+        "label": "Wearable Technology",
+        "href": "/en/categories/wearable-technology",
+        "icon": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787917107300-70b8da/ChatGPT_Image_Aug_20__2026__12_27_56_PM.webp"
+      }
+    ],
+    "slides": [
+      {
+        "text": "Go All in on Big Screen ActionShop Now",
+        "imgs": [
+          "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787917055882-toutn8/image_862.webp"
+        ],
+        "bg": "rgba(0, 0, 0, 0) linear-gradient(0deg, rgb(229, 228, 231) 0%, rgb(222, 223, 233) 100%) repeat scroll 0% 0% / auto padding-box border-box"
+      },
+      {
+        "text": "iPad Miniwith A17 or A18 chipsShop Now",
+        "imgs": [
+          "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787917465098-tphc9y/ipads.webp"
+        ],
+        "bg": "rgb(241, 241, 241) none repeat scroll 0% 0% / auto padding-box border-box"
+      }
+    ],
+    "promos": [
+      {
+        "area": "b",
+        "text": "iPhonesBuy Now",
+        "imgs": [
+          "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787917779394-u2nhgb/image_326.webp"
+        ],
+        "bg": "rgb(244, 246, 248) none repeat scroll 0% 0% / auto padding-box border-box",
+        "heading": "iPhones"
+      },
+      {
+        "area": "c",
+        "text": "Apple WatchesBuy Now",
+        "imgs": [
+          "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787917908470-wlzmhr/Rectangle_236.webp"
+        ],
+        "bg": "rgb(244, 246, 248) none repeat scroll 0% 0% / auto padding-box border-box",
+        "heading": "Apple Watches"
+      }
+    ]
+  },
+  "brands": [
+    {
+      "src": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787988014709-32cd0f/Anker-9579.webp",
+      "alt": "Anker"
+    },
+    {
+      "src": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787990497914-gw3wpt/Apple-6176.webp",
+      "alt": "Apple"
+    },
+    {
+      "src": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787991299020-i5ycfc/Google-4283.webp",
+      "alt": "Google"
+    },
+    {
+      "src": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788006644089-19selu/intel-01-1053.webp",
+      "alt": "Intel"
+    },
+    {
+      "src": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787991181581-m7fyrl/Samsung-4680.webp",
+      "alt": "Samsung"
+    },
+    {
+      "src": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787991461917-x8f6q6/Sony-3098.webp",
+      "alt": "Sony"
+    },
+    {
+      "src": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787991231201-zfgwno/Xiaomi-1934.webp",
+      "alt": "Xioami"
+    }
+  ],
+  "categoryRail": {
+    "heading": "Shop by Categories",
+    "items": [
+      {
+        "label": "Accessories",
+        "href": "/en/categories/accessories",
+        "img": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788002791557-7oqcj0/ChatGPT_Image_Aug_29__2026__05_26_03_PM.webp"
+      },
+      {
+        "label": "Appliances",
+        "href": "/en/categories/appliances",
+        "img": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787916336167-1iyvjw/ChatGPT_Image_Aug_20__2026__11_54_56_AM.webp"
+      },
+      {
+        "label": "Cameras & Smart Home",
+        "href": "/en/categories/cameras-smart-home",
+        "img": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787915969832-qfjsj8/ChatGPT_Image_Aug_19__2026__11_12_01_AM.webp"
+      },
+      {
+        "label": "Gaming",
+        "href": "/en/categories/gaming",
+        "img": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787916056736-fqsi5u/ChatGPT_Image_Aug_20__2026__12_43_23_PM.webp"
+      },
+      {
+        "label": "Laptops. Tablets & PC",
+        "href": "/en/categories/laptops-tablets-pc",
+        "img": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787915882259-rqqaqq/ChatGPT_Image_Aug_19__2026__04_49_49_PM.webp"
+      },
+      {
+        "label": "Mobile Phones",
+        "href": "/en/categories/mobile-phones",
+        "img": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787887860046-pff58a/ChatGPT_Image_Aug_28__2026__08_44_21_AM.webp"
+      },
+      {
+        "label": "PC Parts",
+        "href": "/en/categories/pc-parts",
+        "img": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787916660319-f3morw/ChatGPT_Image_Aug_19__2026__01_01_29_PM.webp"
+      },
+      {
+        "label": "TV & Audio",
+        "href": "/en/categories/tv-audio",
+        "img": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787916110749-jhcbm7/ChatGPT_Image_Aug_19__2026__09_56_38_PM.webp"
+      },
+      {
+        "label": "Wearable Technology",
+        "href": "/en/categories/wearable-technology",
+        "img": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787917107300-70b8da/ChatGPT_Image_Aug_20__2026__12_27_56_PM.webp"
+      }
+    ]
+  },
+  "featureGrid": [
+    {
+      "area": "a",
+      "img": "/templates/electronics/tile-tall-1.png",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "area": "b",
+      "img": "/templates/electronics/tile-small-1.png",
+      "alt": "10% OFF!",
+      "text": ""
+    },
+    {
+      "area": "c",
+      "img": "/templates/electronics/tile-small-2.png",
+      "alt": "Nomad Tech Collection",
+      "text": ""
+    },
+    {
+      "area": "d",
+      "img": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787918673831-v12ojm/Group_249.webp",
+      "alt": "15% OFF! Power Bank",
+      "text": ""
+    },
+    {
+      "area": "e",
+      "img": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787918644688-ybhkao/Group_526.webp",
+      "alt": "",
+      "text": ""
+    }
+  ],
+  "topSelling": {
+    "heading": "Top Selling",
+    "tabs": [
+      "Featured",
+      "New Arrivals",
+      "On Sale"
+    ],
+    "cards": [
+      {
+        "title": "Sony PlayStation Portal Remote Player for PS5 Console",
+        "href": "/en/products/sony-playstation-portal-remote-player-for-ps5-console",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/vendor/6a980391ad6869b1f3756d93/2026/09/1788795855772-aszyui/ChatGPT_Image_Sep_7__2026__09_43_59_PM__1_.webp",
+        "alt": "Sony PlayStation Portal Remote Player for PS5 Console",
+        "price": "Price on request",
+        "oldPrice": null,
+        "badge": "Featured",
+        "colorLabel": "Featured",
+        "swatches": [],
+        "rating": null,
+        "cta": "Request a quote",
+        "ships": null
+      },
+      {
+        "title": "iPad mini 7",
+        "href": "/en/products/ipad-mini-7",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/09/1788244894408-sgl50s/ChatGPT_Image_Sep_1__2026__11_34_17_AM__2_.webp",
+        "alt": "iPad mini 7",
+        "price": "$700.00",
+        "oldPrice": null,
+        "badge": "Pre-order",
+        "colorLabel": "Pre-order",
+        "swatches": [],
+        "rating": null,
+        "cta": "Choose options",
+        "ships": null
+      },
+      {
+        "title": "Xiaomi Pad 8 Pro",
+        "href": "/en/products/xiaomi-pad-8-pro",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788181023311-88vdem/ChatGPT_Image_Aug_31__2026__06_54_05_PM__1_.webp",
+        "alt": "Xiaomi Pad 8 Pro",
+        "price": "$850.00",
+        "oldPrice": "$900.00",
+        "badge": "-6%",
+        "colorLabel": "Black",
+        "swatches": [],
+        "rating": "4.0",
+        "cta": "Choose options",
+        "ships": null
+      },
+      {
+        "title": "Galaxy S25 5G",
+        "href": "/en/products/galaxy-s25-5g",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788159436543-911cu6/ChatGPT_Image_Aug_31__2026__12_56_47_PM__3_.webp",
+        "alt": "Galaxy S25 5G",
+        "price": "$700.00",
+        "oldPrice": null,
+        "badge": "Featured",
+        "colorLabel": "Featured",
+        "swatches": [],
+        "rating": null,
+        "cta": "Choose options",
+        "ships": null
+      },
+      {
+        "title": "Apple Watch Ultra 2 with Ocean Band GPS + Cellular",
+        "href": "/en/products/apple-watch-ultra-2-with-ocean-band-gps-cellular",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788077430193-xu8x24/ChatGPT_Image_Aug_30__2026__02_08_15_PM__1_.webp",
+        "alt": "Apple Watch Ultra 2 with Ocean Band GPS + Cellular",
+        "price": "$900.00",
+        "oldPrice": null,
+        "badge": "Featured",
+        "colorLabel": "Featured",
+        "swatches": [],
+        "rating": null,
+        "cta": "Choose options",
+        "ships": null
+      },
+      {
+        "title": "OnePlus 15R - 5G",
+        "href": "/en/products/oneplus-15r-5g",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788074066278-zkaw1x/ChatGPT_Image_Aug_30__2026__12_12_02_PM__1_.webp",
+        "alt": "OnePlus 15R - 5G",
+        "price": "$750.00",
+        "oldPrice": "$900.00",
+        "badge": "-17%",
+        "colorLabel": "Charcoal Black",
+        "swatches": [],
+        "rating": null,
+        "cta": "Choose options",
+        "ships": null
+      },
+      {
+        "title": "MacBook Pro M5 14-Inch 24GB/1TB 10-Core CPU 10-Core GPU",
+        "href": "/en/products/macbook-pro-m5-14-inch-24gb1tb-10-core-cpu-10-core-gpu",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788008016688-2r36yo/ChatGPT_Image_Aug_29__2026__06_52_56_PM__2_.webp",
+        "alt": "MacBook Pro M5 14-Inch 24GB/1TB 10-Core CPU 10-Core GPU",
+        "price": "$3,200.00",
+        "oldPrice": null,
+        "badge": "Featured",
+        "colorLabel": "Featured",
+        "swatches": [],
+        "rating": null,
+        "cta": "Choose options",
+        "ships": null
+      },
+      {
+        "title": "Intel Core Ultra 9 285K Arrow Lake Processor",
+        "href": "/en/products/intel-core-ultra-9-285k-arrow-lake-processor",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788006877626-77041x/ChatGPT_Image_Aug_29__2026__06_32_27_PM.webp",
+        "alt": "Intel Core Ultra 9 285K Arrow Lake Processor",
+        "price": "$660.00",
+        "oldPrice": null,
+        "badge": "Featured",
+        "colorLabel": "Featured",
+        "swatches": [],
+        "rating": null,
+        "cta": "Add to Cart",
+        "ships": null
+      }
+    ]
+  },
+  "deals": {
+    "kicker": "Today's Featured",
+    "heading": "Deals",
+    "badge": "Up to 17% off",
+    "endsIn": "Ends in10 Days, 21 Hours, 35 Mins, 17 Secs10Days:21Hours:35M",
+    "cta": "View All Deals",
+    "bg": "linear-gradient(rgb(24, 28, 117) 0%, rgb(81, 44, 117) 100%)",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "main": {
+      "text": "-6%Xiaomi Pad 8 Pro$850.00$900.00View-10%Lenovo Legion Go Gaming Handhelds$900.00$1,000.00View-14%Dell Pro 15 Essential PV15255 Ryzen 5 7520U AMD Radeon Graphics 15.6\" FHD Laptop$600.00$700.00View-17%OnePlus 15R - 5G$750.00$900.00View",
+      "imgs": [
+        "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788181023311-88vdem/ChatGPT_Image_Aug_31__2026__06_54_05_PM__1_.webp",
+        "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788091266932-8zlu1z/ChatGPT_Image_Aug_30__2026__05_58_25_PM__1_.webp",
+        "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788087421635-ez5f34/ChatGPT_Image_Aug_30__2026__04_53_59_PM__4_.webp",
+        "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788074066278-zkaw1x/ChatGPT_Image_Aug_30__2026__12_12_02_PM__1_.webp"
+      ]
+    },
+    "cards": [
+      {
+        "title": "DJI Air 3S Fly More Combo With DJI RC 2 Remote Controller",
+        "href": "/en/products/dji-air-3s-fly-more-combo-with-dji-rc-2-remote-controller",
+        "image": null,
+        "alt": "",
+        "price": null,
+        "oldPrice": null,
+        "badge": null,
+        "colorLabel": null,
+        "swatches": [],
+        "rating": null,
+        "cta": null,
+        "ships": null
+      },
+      {
+        "title": "-6%",
+        "href": "/en/products/xiaomi-pad-8-pro",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788181023311-88vdem/ChatGPT_Image_Aug_31__2026__06_54_05_PM__1_.webp",
+        "alt": "Xiaomi Pad 8 Pro",
+        "price": null,
+        "oldPrice": null,
+        "badge": "-6%",
+        "colorLabel": null,
+        "swatches": [],
+        "rating": null,
+        "cta": null,
+        "ships": null
+      },
+      {
+        "title": "Xiaomi Pad 8 Pro",
+        "href": "/en/products/xiaomi-pad-8-pro",
+        "image": null,
+        "alt": "",
+        "price": null,
+        "oldPrice": null,
+        "badge": null,
+        "colorLabel": null,
+        "swatches": [],
+        "rating": null,
+        "cta": null,
+        "ships": null
+      },
+      {
+        "title": "View",
+        "href": "/en/products/xiaomi-pad-8-pro",
+        "image": null,
+        "alt": "",
+        "price": null,
+        "oldPrice": null,
+        "badge": null,
+        "colorLabel": null,
+        "swatches": [],
+        "rating": null,
+        "cta": null,
+        "ships": null
+      },
+      {
+        "title": "-10%",
+        "href": "/en/products/lenovo-legion-go-gaming-handhelds",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788091266932-8zlu1z/ChatGPT_Image_Aug_30__2026__05_58_25_PM__1_.webp",
+        "alt": "Lenovo Legion Go Gaming Handhelds",
+        "price": null,
+        "oldPrice": null,
+        "badge": "-10%",
+        "colorLabel": null,
+        "swatches": [],
+        "rating": null,
+        "cta": null,
+        "ships": null
+      },
+      {
+        "title": "Lenovo Legion Go Gaming Handhelds",
+        "href": "/en/products/lenovo-legion-go-gaming-handhelds",
+        "image": null,
+        "alt": "",
+        "price": null,
+        "oldPrice": null,
+        "badge": null,
+        "colorLabel": null,
+        "swatches": [],
+        "rating": null,
+        "cta": null,
+        "ships": null
+      },
+      {
+        "title": "View",
+        "href": "/en/products/lenovo-legion-go-gaming-handhelds",
+        "image": null,
+        "alt": "",
+        "price": null,
+        "oldPrice": null,
+        "badge": null,
+        "colorLabel": null,
+        "swatches": [],
+        "rating": null,
+        "cta": null,
+        "ships": null
+      },
+      {
+        "title": "-14%",
+        "href": "/en/products/dell-pro-15-essential-pv15255-ryzen-5-7520u-amd-radeon-graphics-156-fhd-laptop",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788087421635-ez5f34/ChatGPT_Image_Aug_30__2026__04_53_59_PM__4_.webp",
+        "alt": "Dell Pro 15 Essential PV15255 Ryzen 5 7520U AMD Radeon Graphics 15.6\" FHD Laptop",
+        "price": null,
+        "oldPrice": null,
+        "badge": "-14%",
+        "colorLabel": null,
+        "swatches": [],
+        "rating": null,
+        "cta": null,
+        "ships": null
+      },
+      {
+        "title": "Dell Pro 15 Essential PV15255 Ryzen 5 7520U AMD Radeon Graph",
+        "href": "/en/products/dell-pro-15-essential-pv15255-ryzen-5-7520u-amd-radeon-graphics-156-fhd-laptop",
+        "image": null,
+        "alt": "",
+        "price": null,
+        "oldPrice": null,
+        "badge": null,
+        "colorLabel": null,
+        "swatches": [],
+        "rating": null,
+        "cta": null,
+        "ships": null
+      },
+      {
+        "title": "View",
+        "href": "/en/products/dell-pro-15-essential-pv15255-ryzen-5-7520u-amd-radeon-graphics-156-fhd-laptop",
+        "image": null,
+        "alt": "",
+        "price": null,
+        "oldPrice": null,
+        "badge": null,
+        "colorLabel": null,
+        "swatches": [],
+        "rating": null,
+        "cta": null,
+        "ships": null
+      },
+      {
+        "title": "-17%",
+        "href": "/en/products/oneplus-15r-5g",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788074066278-zkaw1x/ChatGPT_Image_Aug_30__2026__12_12_02_PM__1_.webp",
+        "alt": "OnePlus 15R - 5G",
+        "price": null,
+        "oldPrice": null,
+        "badge": "-17%",
+        "colorLabel": null,
+        "swatches": [],
+        "rating": null,
+        "cta": null,
+        "ships": null
+      },
+      {
+        "title": "OnePlus 15R - 5G",
+        "href": "/en/products/oneplus-15r-5g",
+        "image": null,
+        "alt": "",
+        "price": null,
+        "oldPrice": null,
+        "badge": null,
+        "colorLabel": null,
+        "swatches": [],
+        "rating": null,
+        "cta": null,
+        "ships": null
+      },
+      {
+        "title": "View",
+        "href": "/en/products/oneplus-15r-5g",
+        "image": null,
+        "alt": "",
+        "price": null,
+        "oldPrice": null,
+        "badge": null,
+        "colorLabel": null,
+        "swatches": [],
+        "rating": null,
+        "cta": null,
+        "ships": null
+      }
+    ]
+  },
+  "collectionsHeading": "Top Collections",
+  "collections": [
+    {
+      "promo": {
+        "heading": "iPhones",
+        "cta": "Buy Now",
+        "img": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787917779394-u2nhgb/image_326.webp",
+        "alt": "",
+        "bg": "rgb(244, 246, 248) none repeat scroll 0% 0% / auto padding-box border-box",
+        "textColor": "rgb(31, 41, 55)"
+      },
+      "cards": [
+        {
+          "title": "iPhone 17",
+          "href": "/en/products/iphone-17",
+          "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787912833261-rs9st4/ChatGPT_Image_Aug_28__2026__04_26_03_PM__1_.webp",
+          "alt": "iPhone 17",
+          "price": "$1,000.00",
+          "oldPrice": null,
+          "badge": "Featured",
+          "colorLabel": "Featured",
+          "swatches": [],
+          "rating": null,
+          "cta": "Choose options",
+          "ships": null
+        },
+        {
+          "title": "iPhone 16 Pro Max",
+          "href": "/en/products/iphone-16-pro-max",
+          "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787911352060-96cdjj/ChatGPT_Image_Aug_28__2026__04_01_47_PM__4_.webp",
+          "alt": "iPhone 16 Pro Max",
+          "price": "$1,000.00",
+          "oldPrice": "$1,200.00",
+          "badge": "-17%",
+          "colorLabel": "Desert Titanium",
+          "swatches": [],
+          "rating": null,
+          "cta": "Choose options",
+          "ships": null
+        },
+        {
+          "title": "iPhone 17 Pro Max",
+          "href": "/en/products/iphone-17-pro-max",
+          "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787911135822-mcmdlo/ChatGPT_Image_Aug_28__2026__03_55_02_PM__3_.webp",
+          "alt": "iPhone 17 Pro Max",
+          "price": "$1,200.00",
+          "oldPrice": "$1,500.00",
+          "badge": "-20%",
+          "colorLabel": "Cosmic Orange",
+          "swatches": [],
+          "rating": null,
+          "cta": "Choose options",
+          "ships": null
+        },
+        {
+          "title": "iPad Air M4 - 2026",
+          "href": "/en/products/ipad-air-m4-2026",
+          "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1786024278969-m6lj5g/iPad-Air-M3---2025aa-6321-removebg-preview.webp",
+          "alt": "iPad Air M4 - 2026",
+          "price": "$900.00",
+          "oldPrice": null,
+          "badge": "Featured",
+          "colorLabel": "Featured",
+          "swatches": [],
+          "rating": null,
+          "cta": "Choose options",
+          "ships": null
+        }
+      ]
+    },
+    {
+      "promo": {
+        "heading": "Apple Watches",
+        "cta": "Buy Now",
+        "img": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787917908470-wlzmhr/Rectangle_236.webp",
+        "alt": "",
+        "bg": "rgb(244, 246, 248) none repeat scroll 0% 0% / auto padding-box border-box",
+        "textColor": "rgb(31, 41, 55)"
+      },
+      "cards": [
+        {
+          "title": "Galaxy Watch9",
+          "href": "/en/products/galaxy-watch9",
+          "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/vendor/6a9843bb5a9a9f71175330f7/2026/09/1788438353202-gsrowx/ChatGPT_Image_Sep_3__2026__06_07_15_PM__2_.webp",
+          "alt": "Galaxy Watch9",
+          "price": "$400.00",
+          "oldPrice": null,
+          "badge": null,
+          "colorLabel": "Midnight Black",
+          "swatches": [],
+          "rating": null,
+          "cta": "Choose options",
+          "ships": null
+        },
+        {
+          "title": "Huawei Watch Fit 2 Active",
+          "href": "/en/products/huawei-watch-fit-2-active",
+          "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788162373856-sfmyns/ChatGPT_Image_Aug_31__2026__01_45_51_PM__3_.webp",
+          "alt": "Huawei Watch Fit 2 Active",
+          "price": "$140.00",
+          "oldPrice": null,
+          "badge": null,
+          "colorLabel": "Black",
+          "swatches": [],
+          "rating": null,
+          "cta": "Choose options",
+          "ships": null
+        },
+        {
+          "title": "Apple Watch Ultra 2 with Ocean Band GPS + Cellular",
+          "href": "/en/products/apple-watch-ultra-2-with-ocean-band-gps-cellular",
+          "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788077430193-xu8x24/ChatGPT_Image_Aug_30__2026__02_08_15_PM__1_.webp",
+          "alt": "Apple Watch Ultra 2 with Ocean Band GPS + Cellular",
+          "price": "$900.00",
+          "oldPrice": null,
+          "badge": "Featured",
+          "colorLabel": "Featured",
+          "swatches": [],
+          "rating": null,
+          "cta": "Choose options",
+          "ships": null
+        },
+        {
+          "title": "CMF by Nothing Watch Pro 2 BT calling Smart Watch",
+          "href": "/en/products/cmf-by-nothing-watch-pro-2-bt-calling-smart-watch",
+          "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/05/1779087890471-54ndxv-cmf-by-nothing-watch-pro-2-bt-calling-smart-watch-dark-gray-1622.png",
+          "alt": "CMF by Nothing Watch Pro 2 BT calling Smart Watch",
+          "price": "$50.00",
+          "oldPrice": null,
+          "badge": null,
+          "colorLabel": "Out of Stock",
+          "swatches": [],
+          "rating": null,
+          "cta": null,
+          "ships": null
+        }
+      ]
+    },
+    {
+      "promo": {
+        "heading": "",
+        "img": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788073632058-uftze5/Frame_694.webp",
+        "alt": "Desk Setup Essentials",
+        "bg": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "textColor": "rgb(33, 43, 54)"
+      },
+      "cards": [
+        {
+          "title": "Acer Nitro Lite NL 16-71G-578S Intel i5-13420H NVIDIA RTX 3050 With 6GB Graphics 16\" Gaming Laptop",
+          "href": "/en/products/acer-nitro-lite-nl-16-71g-578s-intel-i5-13420h-nvidia-rtx-3050-with-6gb-graphics-16-gaming-laptop",
+          "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788086380178-d7y0ha/ChatGPT_Image_Aug_30__2026__04_32_43_PM__3_.webp",
+          "alt": "Acer Nitro Lite NL 16-71G-578S Intel i5-13420H NVIDIA RTX 3050 With 6GB Graphics 16\" Gaming Laptop",
+          "price": "$900.00",
+          "oldPrice": null,
+          "badge": null,
+          "colorLabel": null,
+          "swatches": [],
+          "rating": null,
+          "cta": "Add to Cart",
+          "ships": null
+        },
+        {
+          "title": "MacBook Pro M5 14-Inch 24GB/1TB 10-Core CPU 10-Core GPU",
+          "href": "/en/products/macbook-pro-m5-14-inch-24gb1tb-10-core-cpu-10-core-gpu",
+          "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788008016688-2r36yo/ChatGPT_Image_Aug_29__2026__06_52_56_PM__2_.webp",
+          "alt": "MacBook Pro M5 14-Inch 24GB/1TB 10-Core CPU 10-Core GPU",
+          "price": "$3,200.00",
+          "oldPrice": null,
+          "badge": "Featured",
+          "colorLabel": "Featured",
+          "swatches": [],
+          "rating": null,
+          "cta": "Choose options",
+          "ships": null
+        },
+        {
+          "title": "HP Victus 15-FA2104TX Intel Core i7-13620H NVIDIA GeForce RTX 4050 with 6GB Graphics 15.6\" FHD Gaming Laptop",
+          "href": "/en/products/hp-victus-15-fa2104tx-intel-core-i7-13620h-nvidia-geforce-rtx-4050-with-6gb-graphics-156-fhd-gaming",
+          "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788004402209-lfm79b/ChatGPT_Image_Aug_29__2026__05_51_55_PM__1_.webp",
+          "alt": "HP Victus 15-FA2104TX Intel Core i7-13620H NVIDIA GeForce RTX 4050 with 6GB Graphics 15.6\" FHD Gaming Laptop",
+          "price": "$1,800.00",
+          "oldPrice": null,
+          "badge": "Featured",
+          "colorLabel": "Featured",
+          "swatches": [],
+          "rating": null,
+          "cta": "Add to Cart",
+          "ships": null
+        },
+        {
+          "title": "MacBook Air M5 15-Inch",
+          "href": "/en/products/macbook-air-m5-15-inch",
+          "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787986197722-b5afro/ChatGPT_Image_Aug_29__2026__12_46_56_PM__1_.webp",
+          "alt": "MacBook Air M5 15-Inch",
+          "price": "$2,200.00",
+          "oldPrice": null,
+          "badge": "Pre-order",
+          "colorLabel": "Pre-order",
+          "swatches": [],
+          "rating": null,
+          "cta": "Choose options",
+          "ships": "Ships Sep 15/797 left"
+        }
+      ]
+    }
+  ],
+  "banner": {
+    "heading": "MacBook Pro",
+    "text": "MacBook ProMarket-specific assortments balancing contemporary styling, comfort, durability.Shop Now",
+    "imgs": [
+      "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/09/1788612984300-aoy308/OnPaste.20260905-185602.webp"
+    ],
+    "bg": "rgba(0, 0, 0, 0) linear-gradient(90deg, rgb(28, 36, 55) 0%, rgb(32, 39, 57) 28%, rgb(58, 77, 125) 100%) repeat scroll 0% 0% / auto padding-box border-box"
+  },
+  "grid": {
+    "heading": "Find your favorite products.",
+    "filters": [
+      "All Items",
+      "Accessories",
+      "Appliances",
+      "Cameras & Smart Home",
+      "Gaming",
+      "Google",
+      "Iphone",
+      "Laptops. Tablets & PC"
+    ],
+    "cards": [
+      {
+        "title": "Sony PlayStation Portal Remote Player for PS5 Console",
+        "href": "/en/products/sony-playstation-portal-remote-player-for-ps5-console",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/vendor/6a980391ad6869b1f3756d93/2026/09/1788795855772-aszyui/ChatGPT_Image_Sep_7__2026__09_43_59_PM__1_.webp",
+        "alt": "Sony PlayStation Portal Remote Player for PS5 Console",
+        "price": "Price on request",
+        "oldPrice": null,
+        "badge": "Featured",
+        "colorLabel": "Featured",
+        "swatches": [],
+        "rating": null,
+        "cta": "Request a quote",
+        "ships": null
+      },
+      {
+        "title": "PowerColor Red Devil AMD Radeon RX 9070 XT 16GB GDDR6 Graphics Card",
+        "href": "/en/products/powercolor-red-devil-amd-radeon-rx-9070-xt-16gb-gddr6-graphics-card",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/vendor/6a980391ad6869b1f3756d93/2026/09/1788794706835-ads8oq/ChatGPT_Image_Sep_7__2026__09_21_54_PM__1_.webp",
+        "alt": "PowerColor Red Devil AMD Radeon RX 9070 XT 16GB GDDR6 Graphics Card",
+        "price": "$1,340.00",
+        "oldPrice": null,
+        "badge": null,
+        "colorLabel": "5.0",
+        "swatches": [],
+        "rating": "5.0",
+        "cta": "Add to Cart",
+        "ships": null
+      },
+      {
+        "title": "Beats Solo 4 Wireless Headphones",
+        "href": "/en/products/beats-solo-4-wireless-headphones",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/vendor/6a980fbe60a6ffabdb09e524/2026/09/1788794056541-9vasw9/ChatGPT_Image_Sep_7__2026__09_13_52_PM__2_.webp",
+        "alt": "Beats Solo 4 Wireless Headphones",
+        "price": "$160.00",
+        "oldPrice": null,
+        "badge": "Pre-order",
+        "colorLabel": "Pre-order",
+        "swatches": [],
+        "rating": null,
+        "cta": "Choose options",
+        "ships": "Ships Sep 14/19 left"
+      },
+      {
+        "title": "Skullcandy SLYR Wired OverEar Gaming Headphone",
+        "href": "/en/products/skullcandy-slyr-wired-overear-gaming-headphone",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/vendor/6a980fbe60a6ffabdb09e524/2026/09/1788792220822-81ez9r/ChatGPT_Image_Sep_7__2026__08_43_10_PM__1_.webp",
+        "alt": "Skullcandy SLYR Wired OverEar Gaming Headphone",
+        "price": "$50.00",
+        "oldPrice": null,
+        "badge": "Pre-order",
+        "colorLabel": "Pre-order",
+        "swatches": [],
+        "rating": null,
+        "cta": null,
+        "ships": "Ships Sep 18/10 left"
+      },
+      {
+        "title": "Amazon Echo Dot Max Smart Speaker",
+        "href": "/en/products/amazon-echo-dot-max-smart-speaker",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/vendor/6a980fbe60a6ffabdb09e524/2026/09/1788791653064-2dbnrc/ChatGPT_Image_Sep_7__2026__08_33_53_PM__3_.webp",
+        "alt": "Amazon Echo Dot Max Smart Speaker",
+        "price": "$140.00",
+        "oldPrice": null,
+        "badge": "Pre-order",
+        "colorLabel": "Pre-order",
+        "swatches": [],
+        "rating": null,
+        "cta": "Choose options",
+        "ships": "Ships Sep 18/10 left"
+      },
+      {
+        "title": "Anker Soundcore Liberty 5 ANC TWS Earbuds",
+        "href": "/en/products/anker-soundcore-liberty-5-anc-tws-earbuds",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/vendor/6a980fbe60a6ffabdb09e524/2026/09/1788781677098-kxueub/ChatGPT_Image_Sep_7__2026__05_45_45_PM__3_.webp",
+        "alt": "Anker Soundcore Liberty 5 ANC TWS Earbuds",
+        "price": "$450.00",
+        "oldPrice": null,
+        "badge": null,
+        "colorLabel": "Apricot",
+        "swatches": [],
+        "rating": null,
+        "cta": "Choose options",
+        "ships": null
+      },
+      {
+        "title": "Google Pixel Watch",
+        "href": "/en/products/google-pixel-watch",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/vendor/6a9843bb5a9a9f71175330f7/2026/09/1788449984545-m93v9a/ChatGPT_Image_Sep_3__2026__09_39_01_PM__1_.webp",
+        "alt": "Google Pixel Watch",
+        "price": "$349.00",
+        "oldPrice": null,
+        "badge": null,
+        "colorLabel": "Champagne Gold",
+        "swatches": [],
+        "rating": null,
+        "cta": "Choose options",
+        "ships": null
+      },
+      {
+        "title": "Galaxy Watch9",
+        "href": "/en/products/galaxy-watch9",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/vendor/6a9843bb5a9a9f71175330f7/2026/09/1788438353202-gsrowx/ChatGPT_Image_Sep_3__2026__06_07_15_PM__2_.webp",
+        "alt": "Galaxy Watch9",
+        "price": "$400.00",
+        "oldPrice": null,
+        "badge": null,
+        "colorLabel": "Midnight Black",
+        "swatches": [],
+        "rating": null,
+        "cta": "Choose options",
+        "ships": null
+      },
+      {
+        "title": "iPad mini 7",
+        "href": "/en/products/ipad-mini-7",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/09/1788244894408-sgl50s/ChatGPT_Image_Sep_1__2026__11_34_17_AM__2_.webp",
+        "alt": "iPad mini 7",
+        "price": "$700.00",
+        "oldPrice": null,
+        "badge": "Pre-order",
+        "colorLabel": "Pre-order",
+        "swatches": [],
+        "rating": null,
+        "cta": "Choose options",
+        "ships": null
+      },
+      {
+        "title": "DJI Air 3S Fly More Combo With DJI RC 2 Remote Controller",
+        "href": "/en/products/dji-air-3s-fly-more-combo-with-dji-rc-2-remote-controller",
+        "image": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788187922887-b7oyo7/ChatGPT_Image_Aug_31__2026__02_09_42_PM__2_.webp",
+        "alt": "DJI Air 3S Fly More Combo With DJI RC 2 Remote Controller",
+        "price": "$1,660.00",
+        "oldPrice": "$1,700.00",
+        "badge": "-2%",
+        "colorLabel": null,
+        "swatches": [],
+        "rating": null,
+        "cta": "Add to Cart",
+        "ships": null
+      }
+    ]
+  },
+  "coupon": {
+    "text": "Get 15% offUse coupon code at checkout · Ends Nov 25TECH15Copy codeShop Now",
+    "img": null,
+    "bgColor": "rgb(33, 43, 54)"
+  },
+  "vendors": [
+    {
+      "name": "",
+      "href": "/en/vendors/pixel-forge-computing",
+      "desc": "Pixel Forge Computing provides laptops, desktop components, gaming accessories and reliable computing equipment for work and entertainment.",
+      "imgs": [
+        "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/vendor/6a980391ad6869b1f3756d93/2026/09/1788348490097-8aa0y3/banner.webp",
+        "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/vendor/6a980391ad6869b1f3756d93/2026/09/1788348476566-xynbnv/logo.webp"
+      ],
+      "stats": [],
+      "statValues": [
+        "5.0",
+        "5.0",
+        "1",
+        "$$$"
+      ],
+      "cta": "Go to Shop"
+    },
+    {
+      "name": "",
+      "href": "/en/vendors/smart-haven-electronics",
+      "desc": "Smart Haven Electronics brings practical smart-home devices, wearable technology and entertainment electronics together in one convenient store.",
+      "imgs": [
+        "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/vendor/6a9843bb5a9a9f71175330f7/2026/09/1788364284219-q7moe6/banner.webp",
+        "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/vendor/6a9843bb5a9a9f71175330f7/2026/09/1788364279029-bv0ggh/logo.webp"
+      ],
+      "stats": [],
+      "statValues": [
+        "0.0",
+        "0.0",
+        "0",
+        "$$$"
+      ],
+      "cta": "Go to Shop"
+    },
+    {
+      "name": "",
+      "href": "/en/vendors/sonic-circuit-audio",
+      "desc": "Sonic Circuit Audio supplies quality headphones, speakers, microphones and home audio equipment for music, gaming and professional use.",
+      "imgs": [
+        "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/vendor/6a980fbe60a6ffabdb09e524/2026/09/1788352849667-jhyeee/banner.webp",
+        "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/vendor/6a980fbe60a6ffabdb09e524/2026/09/1788352842564-ix8cse/logo.webp"
+      ],
+      "stats": [],
+      "statValues": [
+        "0.0",
+        "0.0",
+        "0",
+        "$$$"
+      ],
+      "cta": "Go to Shop"
+    },
+    {
+      "name": "",
+      "href": "/en/vendors/nova-mobile-hub",
+      "desc": "Nova Mobile Hub offers the latest smartphones, tablets, mobile accessories and dependable charging solutions from popular technology brands.",
+      "imgs": [
+        "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/vendor/6a97d80da843a901df252b96/2026/09/1788337784655-fpala6/banner.webp",
+        "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/vendor/6a97d80da843a901df252b96/2026/09/1788337689906-10rrw7/profile.webp"
+      ],
+      "stats": [],
+      "statValues": [
+        "0.0",
+        "0.0",
+        "0",
+        "$"
+      ],
+      "cta": "Go to Shop"
+    }
+  ],
+  "vendorsHeading": "Top Vendors",
+  "becomeVendor": {
+    "heading": "Start Selling With Us Today",
+    "text": "Join our marketplace, manage products easily, accept secure payments, and grow your business faster.",
+    "cta": "Become a Vendor",
+    "img": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/09/1788674270237-s101px/Group_424.webp"
+  },
+  "articlesHeading": "Top Articles",
+  "articles": [
+    {
+      "title": "",
+      "href": "/en/blog/essential-gadgets-for-your-home-office",
+      "img": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788093645109-ks8g1l/ChatGPT_Image_Aug_30__2026__06_40_28_PM.webp",
+      "excerpt": "",
+      "text": ""
+    },
+    {
+      "title": "Essential Gadgets for Your Home Office",
+      "href": "/en/blog/essential-gadgets-for-your-home-office",
+      "img": null,
+      "excerpt": "",
+      "text": "Essential Gadgets for Your Home Office"
+    },
+    {
+      "title": "",
+      "href": "/en/blog/electronics-accessories-you-should-own",
+      "img": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788091854466-na187p/ChatGPT_Image_Aug_30__2026__06_10_33_PM.webp",
+      "excerpt": "",
+      "text": ""
+    },
+    {
+      "title": "Electronics Accessories You Should Own",
+      "href": "/en/blog/electronics-accessories-you-should-own",
+      "img": null,
+      "excerpt": "",
+      "text": "Electronics Accessories You Should Own"
+    },
+    {
+      "title": "",
+      "href": "/en/blog/best-smartphones-to-buy-in-2026",
+      "img": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788086972997-qjakad/ChatGPT_Image_Aug_30__2026__04_45_55_PM.webp",
+      "excerpt": "",
+      "text": ""
+    },
+    {
+      "title": "Best Smartphones to Buy in 2026",
+      "href": "/en/blog/best-smartphones-to-buy-in-2026",
+      "img": null,
+      "excerpt": "",
+      "text": "Best Smartphones to Buy in 2026"
+    },
+    {
+      "title": "",
+      "href": "/en/blog/power-banks-for-every-device",
+      "img": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788078167495-gu1a22/ChatGPT_Image_Aug_30__2026__02_22_29_PM.webp",
+      "excerpt": "",
+      "text": ""
+    },
+    {
+      "title": "Power Banks for Every Device",
+      "href": "/en/blog/power-banks-for-every-device",
+      "img": null,
+      "excerpt": "",
+      "text": "Power Banks for Every Device"
+    },
+    {
+      "title": "",
+      "href": "/en/blog/choose-the-perfect-phone-case",
+      "img": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787953618186-7chfcd/blog-3.webp",
+      "excerpt": "",
+      "text": ""
+    },
+    {
+      "title": "Choose the Perfect Phone Case",
+      "href": "/en/blog/choose-the-perfect-phone-case",
+      "img": null,
+      "excerpt": "",
+      "text": "Choose the Perfect Phone Case"
+    },
+    {
+      "title": "",
+      "href": "/en/blog/must-have-accessories",
+      "img": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1787953632134-zkzpvk/blog-1.webp",
+      "excerpt": "",
+      "text": ""
+    },
+    {
+      "title": "Must-Have Accessories",
+      "href": "/en/blog/must-have-accessories",
+      "img": null,
+      "excerpt": "",
+      "text": "Must-Have Accessories"
+    }
+  ],
+  "articlesRaw": 22858,
+  "header": {
+    "topBar": "Free shipping on orders over $50Deliver toSet locationAll CategoriesWelcomeLogin / RegisterAll CategoriesCollectionsProductsBrandsTrack OrderBlogContact UsBecome a VendorDeliver toSet location",
+    "logoImg": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788003217992-uyocld/logo.svg",
+    "searchPlaceholder": "Search products...",
+    "searchCategory": "All Categories",
+    "navLeft": [
+      "Products",
+      "Brands",
+      "Track Order",
+      "Blog",
+      "Contact Us",
+      "Become a Vendor"
+    ],
+    "links": [
+      {
+        "text": "Products",
+        "href": "/en/products"
+      },
+      {
+        "text": "Brands",
+        "href": "/en/brands"
+      },
+      {
+        "text": "Track Order",
+        "href": "/en/track-order"
+      },
+      {
+        "text": "Blog",
+        "href": "/en/blog"
+      },
+      {
+        "text": "Contact Us",
+        "href": "/en/contact"
+      },
+      {
+        "text": "Become a Vendor",
+        "href": "/en/become-vendor"
+      }
+    ],
+    "height": 124
+  },
+  "footer": {
+    "tagline": "Multi-vendor E-commerce Platform",
+    "columns": [
+      {
+        "title": "Products",
+        "links": [
+          {
+            "text": "",
+            "href": "/en"
+          },
+          {
+            "text": "+1 555-0100",
+            "href": "tel:+1555-0100"
+          },
+          {
+            "text": "support@storify.com",
+            "href": "mailto:support@storify.com"
+          },
+          {
+            "text": "Products",
+            "href": "/en/products"
+          },
+          {
+            "text": "Categories",
+            "href": "/en/categories"
+          },
+          {
+            "text": "Brands",
+            "href": "/en/brands"
+          },
+          {
+            "text": "Collections",
+            "href": "/en/collections"
+          },
+          {
+            "text": "New Arrivals",
+            "href": "/en/products"
+          },
+          {
+            "text": "Track Order",
+            "href": "/en/track-order"
+          },
+          {
+            "text": "FAQ",
+            "href": "/en/faq"
+          },
+          {
+            "text": "Returns",
+            "href": "/en/returns"
+          },
+          {
+            "text": "Contact",
+            "href": "/en/contact"
+          },
+          {
+            "text": "Blog",
+            "href": "/en/blog"
+          },
+          {
+            "text": "Careers",
+            "href": "/en/careers"
+          },
+          {
+            "text": "Become a Vendor",
+            "href": "/en/become-vendor"
+          },
+          {
+            "text": "Terms of Service",
+            "href": "/en/terms"
+          },
+          {
+            "text": "Privacy Policy",
+            "href": "/en/privacy"
+          },
+          {
+            "text": "Cookie Policy",
+            "href": "/en/cookies"
+          },
+          {
+            "text": "Accessibility",
+            "href": "/en/accessibility"
+          }
+        ]
+      },
+      {
+        "title": "Products",
+        "links": [
+          {
+            "text": "",
+            "href": "/en"
+          },
+          {
+            "text": "+1 555-0100",
+            "href": "tel:+1555-0100"
+          },
+          {
+            "text": "support@storify.com",
+            "href": "mailto:support@storify.com"
+          },
+          {
+            "text": "Products",
+            "href": "/en/products"
+          },
+          {
+            "text": "Categories",
+            "href": "/en/categories"
+          },
+          {
+            "text": "Brands",
+            "href": "/en/brands"
+          },
+          {
+            "text": "Collections",
+            "href": "/en/collections"
+          },
+          {
+            "text": "New Arrivals",
+            "href": "/en/products"
+          },
+          {
+            "text": "Track Order",
+            "href": "/en/track-order"
+          },
+          {
+            "text": "FAQ",
+            "href": "/en/faq"
+          },
+          {
+            "text": "Returns",
+            "href": "/en/returns"
+          },
+          {
+            "text": "Contact",
+            "href": "/en/contact"
+          },
+          {
+            "text": "Blog",
+            "href": "/en/blog"
+          },
+          {
+            "text": "Careers",
+            "href": "/en/careers"
+          },
+          {
+            "text": "Become a Vendor",
+            "href": "/en/become-vendor"
+          },
+          {
+            "text": "Terms of Service",
+            "href": "/en/terms"
+          },
+          {
+            "text": "Privacy Policy",
+            "href": "/en/privacy"
+          },
+          {
+            "text": "Cookie Policy",
+            "href": "/en/cookies"
+          },
+          {
+            "text": "Accessibility",
+            "href": "/en/accessibility"
+          }
+        ]
+      },
+      {
+        "title": "Products",
+        "links": [
+          {
+            "text": "Products",
+            "href": "/en/products"
+          },
+          {
+            "text": "Categories",
+            "href": "/en/categories"
+          },
+          {
+            "text": "Brands",
+            "href": "/en/brands"
+          },
+          {
+            "text": "Collections",
+            "href": "/en/collections"
+          },
+          {
+            "text": "New Arrivals",
+            "href": "/en/products"
+          }
+        ]
+      },
+      {
+        "title": "Help",
+        "links": [
+          {
+            "text": "Track Order",
+            "href": "/en/track-order"
+          },
+          {
+            "text": "FAQ",
+            "href": "/en/faq"
+          },
+          {
+            "text": "Returns",
+            "href": "/en/returns"
+          },
+          {
+            "text": "Contact",
+            "href": "/en/contact"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "text": "Blog",
+            "href": "/en/blog"
+          },
+          {
+            "text": "Careers",
+            "href": "/en/careers"
+          },
+          {
+            "text": "Become a Vendor",
+            "href": "/en/become-vendor"
+          }
+        ]
+      },
+      {
+        "title": "Legal",
+        "links": [
+          {
+            "text": "Terms of Service",
+            "href": "/en/terms"
+          },
+          {
+            "text": "Privacy Policy",
+            "href": "/en/privacy"
+          },
+          {
+            "text": "Cookie Policy",
+            "href": "/en/cookies"
+          },
+          {
+            "text": "Accessibility",
+            "href": "/en/accessibility"
+          }
+        ]
+      }
+    ],
+    "contact": [
+      "Multi-vendor E-commerce PlatformContact+1 555-0100support@storify.com123 Main Street, New York, NY 10001ProductsProductsCategoriesBrandsCollectionsNew ArrivalsHelpTrack OrderFAQReturnsContactCompanyBlogCareersBecome a VendorLegalTerms of ServicePrivacy PolicyCookie PolicyAccessibility",
+      "Multi-vendor E-commerce PlatformContact+1 555-0100support@storify.com123 Main Street, New York, NY 10001ProductsProductsCategoriesBrandsCollectionsNew ArrivalsHelpTrack OrderFAQReturnsContactCompanyBlogCareersBecome a VendorLegalTerms of ServicePrivacy PolicyCookie PolicyAccessibility",
+      "Multi-vendor E-commerce PlatformContact+1 555-0100support@storify.com123 Main Street, New York, NY 10001"
+    ],
+    "copyright": "© 2026 Storify. All rights reserved.",
+    "logoImg": "https://pub-49808a4ecaf04280b0561965cf5a40a4.r2.dev/uploads/2026/08/1788003217992-uyocld/logo.svg"
+  }
+}

@@ -1,0 +1,473 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-heading: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/*
+ * Design tokens extracted verbatim from
+ * https://storify-demo.neurolightstudio.com/en
+ * (source: _next/static/chunks/24nl_lyjzqd18.css, :root and .dark blocks)
+ */
+:root {
+  --radius: 1rem;
+  --background: #f5f5f5;
+  --foreground: #161616;
+  --card: #fff;
+  --card-foreground: #161616;
+  --popover: #fff;
+  --popover-foreground: #161616;
+  --primary: #0073d2;
+  --primary-foreground: #fff;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #161616;
+  --muted: #f5f5f5;
+  --muted-foreground: #717171;
+  --accent: #e0f1ff1f;
+  --accent-foreground: #0073d2;
+  --destructive: #e40014;
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #0073d2;
+  --chart-1: #0073d2;
+  --chart-2: #cd9200;
+  --chart-3: #104e64;
+  --chart-4: #fcbb00;
+  --chart-5: #f99c00;
+  --sidebar: #fff;
+  --sidebar-foreground: #484848;
+  --sidebar-primary: #0073d2;
+  --sidebar-primary-foreground: #fff;
+  --sidebar-accent: #e0f1ff1f;
+  --sidebar-accent-foreground: #0073d2;
+  --sidebar-border: #e5e5e580;
+  --sidebar-ring: #0073d2;
+
+  --storefront-header-height: 124px;
+}
+
+/*
+ * Storefront theme ("electronics" preset) — copied from the inline style the
+ * target renders on its `.store-surface` wrapper. These drive the shadcn
+ * tokens above via the mapping rule in @layer components.
+ */
+.store-surface {
+  --store-l-background: #ffffff;
+  --store-d-background: #1a1a1a;
+  --store-l-surface: #ffffff;
+  --store-d-surface: #262626;
+  --store-l-surface-alt: #f4f6f8;
+  --store-d-surface-alt: #333333;
+  --store-l-text: #212b36;
+  --store-d-text: #fafafa;
+  --store-l-text-muted: #637381;
+  --store-d-text-muted: #a3a3a3;
+  --store-l-border: #ebebeb;
+  --store-d-border: #2f2f2f;
+  --store-l-primary: #2065d1;
+  --store-d-primary: #2065d1;
+  --store-l-on-primary: #ffffff;
+  --store-d-on-primary: #ffffff;
+  --store-l-secondary: #f4f6f8;
+  --store-d-secondary: #333333;
+  --store-l-on-secondary: #1a1a1a;
+  --store-d-on-secondary: #ffffff;
+  --store-l-accent: #b7c5e6;
+  --store-d-accent: #333333;
+  --store-l-sale: #dc2626;
+  --store-d-sale: #ef4444;
+  --store-l-rating: #f59e0b;
+  --store-d-rating: #fbbf24;
+  --store-l-link: #2065d1;
+  --store-d-link: #2065d1;
+  --store-heading-weight: 700;
+  --store-heading-tracking: -0.03em;
+  --store-heading-transform: none;
+  --store-btn-weight: 600;
+  --store-page-width: 1440px;
+  --store-page-padding: 1rem;
+  --radius: 8px;
+  --store-radius-card: 8px;
+  --store-radius-button: 10px;
+  --store-radius-badge: 4px;
+  --store-shadow-overlay: 0 4px 16px rgb(0 0 0 / 0.12), 0 2px 4px rgb(0 0 0 / 0.06);
+  --store-btn-height: 44px;
+  --sec-title: 1.5rem;
+  --sec-title-lg: 1.875rem;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --card: #171717;
+  --card-foreground: #fafafa;
+  --popover: #171717;
+  --popover-foreground: #fafafa;
+  --primary: #0073d2;
+  --primary-foreground: #fafafa;
+  --secondary: #262626;
+  --secondary-foreground: #fafafa;
+  --muted: #262626;
+  --muted-foreground: #a1a1a1;
+  --accent: #262626;
+  --accent-foreground: #fafafa;
+  --destructive: #ff6568;
+  --border: #ffffff1a;
+  --input: #ffffff26;
+  --ring: #737373;
+  --sidebar: #171717;
+  --sidebar-foreground: #fafafa;
+  --sidebar-primary: #0073d2;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-accent: #262626;
+  --sidebar-accent-foreground: #fafafa;
+  --sidebar-border: #ffffff1a;
+  --sidebar-ring: #737373;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  /* .rounded-button — target: border-radius:var(--store-radius-button,calc(var(--radius) - 2px)) */
+  .rounded-button {
+    border-radius: var(--store-radius-button, calc(var(--radius) - 2px));
+  }
+
+  /*
+   * .hs-grid — hero / feature mosaics. Templates copied verbatim from the
+   * target stylesheet (base, md:768px and lg:1024px variants).
+   */
+  .hs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .hs-grid > [data-hs-area] {
+    min-width: 0;
+    min-height: 0;
+    aspect-ratio: 16 / 7;
+  }
+  .hs-grid [data-hs-area="a"] {
+    grid-area: a;
+  }
+  .hs-grid [data-hs-area="b"] {
+    grid-area: b;
+  }
+  .hs-grid [data-hs-area="c"] {
+    grid-area: c;
+  }
+  .hs-grid [data-hs-area="d"] {
+    grid-area: d;
+  }
+  .hs-grid [data-hs-area="e"] {
+    grid-area: e;
+  }
+  .hs-grid [data-hs-area="cat"] {
+    grid-area: cat;
+  }
+
+  .hs-grid--leftCategoryBar3 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "a a" "b c";
+  }
+  .hs-grid--leftCategoryBar3 [data-hs-area="a"] {
+    aspect-ratio: 16 / 10;
+  }
+  .hs-grid--leftCategoryBar3 :is([data-hs-area="b"], [data-hs-area="c"]) {
+    aspect-ratio: 1;
+  }
+  .hs-grid--feature {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "a b" "a c" "d d" "e e";
+  }
+  .hs-grid--feature [data-hs-area="a"] {
+    aspect-ratio: auto;
+  }
+  .hs-grid--feature :is([data-hs-area="b"], [data-hs-area="c"], [data-hs-area="e"]) {
+    aspect-ratio: 4 / 3;
+  }
+  .hs-grid--feature [data-hs-area="d"] {
+    aspect-ratio: 5 / 2;
+  }
+
+  @media (min-width: 640px) {
+    .hs-grid--leftCategoryBar3 [data-hs-area="a"] {
+      aspect-ratio: 16 / 9;
+    }
+    .hs-grid--leftCategoryBar3 :is([data-hs-area="b"], [data-hs-area="c"]) {
+      aspect-ratio: 4 / 3;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .hs-grid--leftCategoryBar3 {
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas: "a b" "a c";
+    }
+    .hs-grid--leftCategoryBar3 :is([data-hs-area="b"], [data-hs-area="c"]) {
+      aspect-ratio: auto;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hs-grid,
+    .hs-grid > [data-hs-area] {
+      aspect-ratio: auto;
+    }
+    .hs-grid--leftCategoryBar3 {
+      grid-template:
+        "cat a b" 1fr
+        "cat a c" 1fr / minmax(220px, 1fr) 2.2fr 1fr;
+    }
+    .hs-grid--feature {
+      grid-template:
+        "a b c e" 1fr
+        "a d d e" 1fr / 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  /*
+   * Slide system (.sl-*) — copied from the target's stylesheet. Every slide is
+   * a size container named `slide`; art placement, padding and type scale are
+   * driven by the container's aspect ratio:
+   *   default (square-ish) uses the `-s` custom properties
+   *   min-aspect-ratio 7/5  (landscape) uses `-l`
+   *   max-aspect-ratio 5/7  (portrait)  uses `-p`
+   */
+  .sl-frame {
+    container: slide / size;
+  }
+  .sl-art {
+    display: flex;
+    padding: 5.5814cqw;
+    justify-content: var(--sl-art-jc-s);
+    align-items: var(--sl-art-ai-s);
+    --sl-art-w: var(--sl-art-w-s);
+    --sl-art-t: var(--sl-art-t-s);
+  }
+  .sl-art-box {
+    width: var(--sl-art-w);
+    transform: var(--sl-art-t);
+  }
+  .sl-content {
+    display: flex;
+    padding: 7.4419cqw;
+    justify-content: var(--sl-jc-s);
+    align-items: var(--sl-ai-s);
+    text-align: var(--sl-ta-s);
+    --sl-jc: var(--sl-jc-s);
+    --sl-gap: var(--sl-gap-s);
+    --sl-scale: var(--sl-scale-s);
+  }
+  .sl-stack {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    align-items: var(--sl-jc);
+    gap: calc(var(--sl-gap, 12px) * var(--sl-scale, 1));
+  }
+  .sl-text {
+    --fs: var(--fs-s);
+    --wt: var(--wt-s);
+    --it: var(--it-s);
+    --co: var(--co-s);
+    --wd: var(--wd-s);
+    font-size: max(9px, calc(var(--fs) * var(--sl-scale, 1)));
+    font-weight: var(--wt);
+    font-style: var(--it);
+    color: var(--co);
+    line-height: 1.2;
+    width: var(--wd);
+    max-width: 100%;
+  }
+  @container slide (min-aspect-ratio: 7/5) {
+    .sl-content {
+      padding: 4.883cqw;
+      justify-content: var(--sl-jc-l);
+      align-items: var(--sl-ai-l);
+      text-align: var(--sl-ta-l);
+      --sl-jc: var(--sl-jc-l);
+      --sl-gap: var(--sl-gap-l);
+      --sl-scale: var(--sl-scale-l);
+    }
+    .sl-art {
+      padding: 2.4415cqw;
+      justify-content: var(--sl-art-jc-l);
+      align-items: var(--sl-art-ai-l);
+      --sl-art-w: var(--sl-art-w-l);
+      --sl-art-t: var(--sl-art-t-l);
+    }
+    .sl-text {
+      --fs: var(--fs-l);
+      --wt: var(--wt-l);
+      --it: var(--it-l);
+      --co: var(--co-l);
+      --wd: var(--wd-l);
+    }
+  }
+  @container slide (max-aspect-ratio: 5/7) {
+    .sl-content {
+      padding: 8.2645cqw;
+      justify-content: var(--sl-jc-p);
+      align-items: var(--sl-ai-p);
+      text-align: var(--sl-ta-p);
+      --sl-jc: var(--sl-jc-p);
+      --sl-gap: var(--sl-gap-p);
+      --sl-scale: var(--sl-scale-p);
+    }
+    .sl-art {
+      padding: 6.6116cqw;
+      justify-content: var(--sl-art-jc-p);
+      align-items: var(--sl-art-ai-p);
+      --sl-art-w: var(--sl-art-w-p);
+      --sl-art-t: var(--sl-art-t-p);
+    }
+    .sl-text {
+      --fs: var(--fs-p);
+      --wt: var(--wt-p);
+      --it: var(--it-p);
+      --co: var(--co-p);
+      --wd: var(--wd-p);
+    }
+  }
+
+  /* slide reveal animations used by the hero + wide banners */
+  .sl-reveal-fade {
+    animation: sl-reveal-fade 0.6s both;
+  }
+  .sl-reveal-rise {
+    animation: sl-reveal-rise 0.6s both;
+  }
+  @keyframes sl-reveal-fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes sl-reveal-rise {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .sl-reveal-fade,
+    .sl-reveal-rise {
+      animation: none;
+    }
+  }
+
+  /* horizontal rails hide their scrollbar on the target site */
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Unlayered: must win over Tailwind's `container` and text utilities. */
+/* .store-surface — token mapping, container width, heading treatment */
+.store-surface {
+  --background: var(--store-l-background);
+  --card: var(--store-l-surface);
+  --popover: var(--store-l-surface);
+  --muted: var(--store-l-surface-alt);
+  --secondary: var(--store-l-secondary);
+  --foreground: var(--store-l-text);
+  --card-foreground: var(--store-l-text);
+  --popover-foreground: var(--store-l-text);
+  --secondary-foreground: var(--store-l-on-secondary);
+  --muted-foreground: var(--store-l-text-muted);
+  --border: var(--store-l-border);
+  --input: var(--store-l-border);
+  --primary: var(--store-l-primary);
+  --primary-foreground: var(--store-l-on-primary);
+  --accent: var(--store-l-accent);
+  --ring: var(--store-l-primary);
+  --destructive: var(--store-l-sale);
+}
+.dark .store-surface {
+  --background: var(--store-d-background);
+  --card: var(--store-d-surface);
+  --popover: var(--store-d-surface);
+  --muted: var(--store-d-surface-alt);
+  --secondary: var(--store-d-secondary);
+  --foreground: var(--store-d-text);
+  --card-foreground: var(--store-d-text);
+  --popover-foreground: var(--store-d-text);
+  --secondary-foreground: var(--store-d-on-secondary);
+  --muted-foreground: var(--store-d-text-muted);
+  --border: var(--store-d-border);
+  --input: var(--store-d-border);
+  --primary: var(--store-d-primary);
+  --primary-foreground: var(--store-d-on-primary);
+  --accent: var(--store-d-accent);
+  --destructive: var(--store-d-sale);
+}
+.store-surface .container {
+  max-width: min(100%, var(--store-page-width, 1440px));
+  padding-inline: var(--store-page-padding, 1rem);
+}
+.store-surface :is(h1, h2, h3) {
+  font-weight: var(--store-heading-weight, 700);
+  letter-spacing: var(--store-heading-tracking, -0.01em);
+}
