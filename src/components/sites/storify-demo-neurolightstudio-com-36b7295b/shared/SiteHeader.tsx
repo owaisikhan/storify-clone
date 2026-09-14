@@ -50,8 +50,15 @@ export function SiteHeader() {
   const [collapsed, setCollapsed] = useState(false);
   const { count, openCart } = useCart();
 
+  // Collapsing removes the ~64px search row from the flow, which nudges the
+  // scroll position back below a single threshold and re-expands the header —
+  // an endless bounce. Two thresholds with a gap wider than that shift (collapse
+  // past 140, expand only back under 40) break the loop.
   useEffect(() => {
-    const onScroll = () => setCollapsed(window.scrollY > 80);
+    const onScroll = () => {
+      const y = window.scrollY;
+      setCollapsed((was) => (was ? y > 40 : y > 140));
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
