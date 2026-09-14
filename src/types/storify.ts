@@ -167,3 +167,24 @@ export interface ProductDetail {
   vendor: string | null;
   vendorSlug: string | null;
 }
+
+export interface BlogPost {
+  slug: string;
+  title: string;
+  excerpt: string;
+  /** the badge on the card / article header; the oldest post carries none */
+  category: string | null;
+  author: string;
+  /** null when the target falls back to an initial avatar */
+  authorAvatar: string | null;
+  date: string;
+  readTime: string;
+  comments: number;
+  image: string;
+  imageAlt: string | null;
+  tags: string[];
+  /** slugs the target links under "Related articles" */
+  related: string[];
+  /** the site's own rich-text markup for the post body */
+  body: string;
+}
