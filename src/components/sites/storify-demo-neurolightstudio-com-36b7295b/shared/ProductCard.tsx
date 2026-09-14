@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import type { Product } from "@/types/storify";
 
 import { useCart } from "../cart/CartProvider";
+import { useWishlist } from "../en-account/WishlistProvider";
 
 /**
  * Product card as rendered by the target site.
@@ -20,6 +21,8 @@ import { useCart } from "../cart/CartProvider";
 export function ProductCard({ product }: { product: Product }) {
   const hoverActions = product.priceOnRequest ? 1 : 2;
   const { add } = useCart();
+  const wishlist = useWishlist();
+  const wished = wishlist.has(product.slug);
 
   // The card is one big <a>, so the hover action is a role="button" span:
   // nesting a real <button> inside an anchor is invalid markup.
@@ -86,10 +89,16 @@ export function ProductCard({ product }: { product: Product }) {
 
           <button
             type="button"
-            aria-label="Add to wishlist"
+            aria-label={wished ? "Remove from wishlist" : "Add to wishlist"}
+            aria-pressed={wished}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              wishlist.toggle(product.slug);
+            }}
             className="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full border border-border/60 bg-background/80 text-muted-foreground shadow-sm backdrop-blur transition-all duration-300 hover:bg-background hover:text-foreground active:scale-90 sm:right-3 sm:top-3 sm:h-10 sm:w-10 [@media(hover:hover)]:pointer-events-none [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover:pointer-events-auto [@media(hover:hover)]:group-hover:opacity-100 [@media(hover:hover)]:group-focus-within:pointer-events-auto [@media(hover:hover)]:group-focus-within:opacity-100"
           >
-            <Heart className="h-3.5 w-3.5 transition-all sm:h-5 sm:w-5" />
+            <Heart className={cn("h-3.5 w-3.5 transition-all sm:h-5 sm:w-5", wished && "fill-rose-500 text-rose-500")} />
           </button>
           <button
             type="button"
