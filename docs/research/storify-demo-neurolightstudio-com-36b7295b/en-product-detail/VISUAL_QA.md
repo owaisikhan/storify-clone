@@ -37,6 +37,16 @@ Reference: Xiaomi Pad 8 Pro.
 | Body scroll lock | `overflow: hidden` | ✅, restored on close |
 | Keyboard | arrows page, Escape closes | ✅ |
 
+## Share row — verified
+
+| Check | Result |
+| --- | --- |
+| Facebook / X / WhatsApp | real `<a>` with `target="_blank" rel="noopener noreferrer"` and the target's exact query shapes ✅ |
+| Email | `mailto:` with subject + body, no target ✅ |
+| Copy link | clipboard receives the canonical URL ✅ |
+| Copy feedback | icon `Link2` → `Check`, aria → "Link copied", toast shown ✅ |
+| Revert | back to `Link2` / "Copy link" after ~2s ✅ |
+
 ## Known differences
 
 - **Reviews section absent** — deferred by request.

@@ -4,9 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import {
-  Copy,
   Home,
-  Mail,
   Minus,
   Plus,
   RotateCcw,
@@ -17,6 +15,8 @@ import {
 
 import { cn } from "@/lib/utils";
 import type { Product, ProductDetail } from "@/types/storify";
+
+import { ShareRow } from "./ShareRow";
 
 /**
  * Right-hand column of the product detail page.
@@ -48,37 +48,6 @@ function Collapsible({ label, body }: { label: string; body: string }) {
         <p className="pb-4 text-sm leading-relaxed text-muted-foreground">{body}</p>
       )}
     </div>
-  );
-}
-
-const SHARE = [
-  { label: "Share on Facebook", Icon: FacebookGlyph },
-  { label: "Share on X", Icon: XGlyph },
-  { label: "Share on WhatsApp", Icon: WhatsAppGlyph },
-  { label: "Share via email", Icon: Mail },
-  { label: "Copy link", Icon: Copy },
-];
-
-/** lucide v1 ships no brand marks, so these three are inlined from the target. */
-function FacebookGlyph({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12" />
-    </svg>
-  );
-}
-function XGlyph({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <path d="M18.9 2.6h3.3l-7.2 8.3 8.5 11.3h-6.6l-5.2-6.8-6 6.8H2.4l7.7-8.9L2 2.6h6.8l4.7 6.2zm-1.2 17.7h1.8L7.4 4.4H5.4z" />
-    </svg>
-  );
-}
-function WhatsAppGlyph({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2m0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-2.8.8.8-2.8-.2-.3A8.2 8.2 0 0 1 12 3.8m-3.1 4c-.2 0-.5 0-.7.3-.3.3-1 .9-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.2 2.4.9 2.9.8 3.4.7.5 0 1.6-.6 1.8-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3l-1.9-.9c-.3-.1-.5-.2-.7.1l-.9 1.2c-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5.3-.5v-.5l-.8-2c-.2-.5-.4-.4-.6-.4z" />
-    </svg>
   );
 }
 
@@ -347,21 +316,8 @@ export function BuyBox({
         </p>
       </div>
 
-      <div className="mt-6">
-        <p className="mb-3 text-sm font-semibold text-foreground">Share</p>
-        <div className="flex flex-wrap items-center gap-2.5">
-          {SHARE.map(({ label, Icon }) => (
-            <button
-              key={label}
-              type="button"
-              aria-label={label}
-              className="grid size-10 cursor-pointer place-items-center rounded-lg bg-muted text-foreground transition-colors hover:bg-muted/70"
-            >
-              <Icon className="h-4 w-4" />
-            </button>
-          ))}
-        </div>
-      </div>
+      <ShareRow name={product.name} path={product.href} />
+
     </div>
   );
 }

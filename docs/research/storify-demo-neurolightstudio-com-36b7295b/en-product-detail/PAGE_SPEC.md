@@ -73,7 +73,25 @@ image · quantity stepper · the three collapsibles · tab switching · related 
 | Main arrows | aria "Show previous media" / "Show next media", `h-10 w-10` round, `left-3` / `right-3` |
 | Thumbnails | `aspect-4/3 w-[calc(25%-0.75rem)]`, aria "Show image N" — four across |
 
-**Inert (visual only):** Add to Cart, Buy Now, share buttons.
+### Share row (measured)
+
+Tiles are `h-10 w-10 rounded-lg bg-muted`, `gap-2`, under a
+`text-sm font-semibold` "Share" label; each picks up its network's colour on
+hover (Facebook `#1877F2`, WhatsApp `#25D366`, the rest `foreground`).
+
+| Control | Target behaviour |
+| --- | --- |
+| Facebook | `<a target="_blank" rel="noopener noreferrer">` → `facebook.com/sharer/sharer.php?u=<url>` |
+| X | → `twitter.com/intent/tweet?url=<url>&text=<product name>` |
+| WhatsApp | → `wa.me/?text=<product name> <url>` |
+| Email | `mailto:?subject=<name>&body=Share this product with friends and family\n<url>` (no target) |
+| Copy link | `<button>`; writes the URL to the clipboard, icon `Link2` → `Check`, aria "Copy link" → "Link copied", toast "Link copied", both reverting after ~2s |
+
+The shared URL is this clone's own canonical URL, built from `siteUrl` in
+`src/data/site.ts` (override with `NEXT_PUBLIC_SITE_URL`). It is computed the
+same way on server and client so the anchors hydrate without a mismatch.
+
+**Inert (visual only):** Add to Cart, Buy Now.
 
 ## Not built yet
 

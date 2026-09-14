@@ -15,6 +15,13 @@ import type {
   Vendor,
 } from "@/types/storify";
 
+/**
+ * Canonical origin used to build shareable links. Deterministic on server and
+ * client, so the share anchors hydrate without a mismatch.
+ */
+export const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://storify-clone.vercel.app";
+
 export const announcement = "Free shipping on orders over $50";
 
 export const announcementGradient =
