@@ -1,9 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Heart, Maximize2, Scale, ShoppingCart, Star } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import type { Product } from "@/types/storify";
+
+import { useCart } from "../cart/CartProvider";
 
 /**
  * Product card as rendered by the target site.
@@ -15,6 +19,24 @@ import type { Product } from "@/types/storify";
  */
 export function ProductCard({ product }: { product: Product }) {
   const hoverActions = product.priceOnRequest ? 1 : 2;
+  const { add } = useCart();
+
+  // The card is one big <a>, so the hover action is a role="button" span:
+  // nesting a real <button> inside an anchor is invalid markup.
+  const addToCart = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    add({
+      key: `${product.slug}::`,
+      slug: product.slug,
+      href: product.href,
+      name: product.name,
+      image: product.image,
+      price: product.price,
+      priceLabel: product.priceLabel,
+      variantLabel: product.colorLabel ? `Color: ${product.colorLabel}` : null,
+    });
+  };
 
   return (
     <Link
@@ -84,7 +106,16 @@ export function ProductCard({ product }: { product: Product }) {
             )}
           >
             {!product.priceOnRequest && (
-              <span className="flex h-8 min-w-0 items-center justify-center gap-1 rounded-full bg-foreground px-2 text-[11px] font-semibold leading-none text-background shadow-lg transition-colors hover:bg-foreground/90">
+              <span
+                role="button"
+                tabIndex={0}
+                aria-label={`${product.cta}: ${product.name}`}
+                onClick={addToCart}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") addToCart(e);
+                }}
+                className="flex h-8 min-w-0 cursor-pointer items-center justify-center gap-1 rounded-full bg-foreground px-2 text-[11px] font-semibold leading-none text-background shadow-lg transition-colors hover:bg-foreground/90"
+              >
                 {product.cta === "Add to Cart" ? (
                   <ShoppingCart className="h-3.5 w-3.5 shrink-0" />
                 ) : null}

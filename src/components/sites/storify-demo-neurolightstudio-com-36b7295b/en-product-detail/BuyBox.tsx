@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { useCart } from "../cart/CartProvider";
 import type { Product, ProductDetail } from "@/types/storify";
 
 import { ShareRow } from "./ShareRow";
@@ -23,8 +24,9 @@ import { ShareRow } from "./ShareRow";
  *
  * INTERACTION MODEL: click-driven. Option pills pick a variant, which updates
  * the price/compare-at pair; the quantity stepper and the Overview/Product
- * Details/FAQ rows are local state. Add to Cart, Buy Now and the share links
- * are presentational — there is no cart or backend in this clone.
+ * Details/FAQ rows are local state. Add to Cart and Buy Now push the chosen
+ * variant into the client-side cart and open the drawer; the share links are
+ * real. There is no backend, so Buy Now stops at the cart.
  */
 
 function Collapsible({ label, body }: { label: string; body: string }) {
@@ -66,6 +68,7 @@ export function BuyBox({
     ),
   );
   const [qty, setQty] = useState(1);
+  const { add } = useCart();
 
   // Match the variant whose option values all equal the current selection.
   const variant = useMemo(() => {
@@ -86,6 +89,32 @@ export function BuyBox({
         )
       : product.discount;
   const inStock = variant ? variant.stock > 0 : product.inStock;
+
+  // One line per distinct option combination, e.g.
+  // "iphone-17-pro::Color=Titanium|Storage=256GB".
+  const variantLabel =
+    detail.options.length > 0
+      ? detail.options
+          .map((o) => `${o.name}: ${selected[o.name]}`)
+          .filter(Boolean)
+          .join(" · ")
+      : null;
+
+  const addToCart = () => {
+    add({
+      key: `${product.slug}::${detail.options
+        .map((o) => `${o.name}=${selected[o.name]}`)
+        .join("|")}`,
+      slug: product.slug,
+      href: product.href,
+      name: product.name,
+      image: detail.images[0] ?? product.image,
+      price: variant?.price ?? product.price,
+      priceLabel,
+      variantLabel,
+      quantity: qty,
+    });
+  };
 
   const pick = (option: string, value: string, valueIndex: number) => {
     setSelected((s) => ({ ...s, [option]: value }));
@@ -271,13 +300,17 @@ export function BuyBox({
         </div>
         <button
           type="button"
-          className="h-12 min-w-[180px] flex-1 cursor-pointer rounded-lg bg-[#1e2a36] text-sm font-semibold text-white transition-colors hover:bg-[#1e2a36]/90"
+          onClick={addToCart}
+          disabled={!inStock}
+          className="h-12 min-w-[180px] flex-1 cursor-pointer rounded-lg bg-[#1e2a36] text-sm font-semibold text-white transition-colors hover:bg-[#1e2a36]/90 disabled:cursor-not-allowed disabled:opacity-50"
         >
           Add to Cart
         </button>
         <button
           type="button"
-          className="h-12 min-w-[180px] flex-1 cursor-pointer rounded-lg bg-primary text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+          onClick={addToCart}
+          disabled={!inStock}
+          className="h-12 min-w-[180px] flex-1 cursor-pointer rounded-lg bg-primary text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-50"
         >
           Buy Now
         </button>

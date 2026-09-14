@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import { CartDrawer } from "@/components/sites/storify-demo-neurolightstudio-com-36b7295b/cart/CartDrawer";
+import { CartProvider } from "@/components/sites/storify-demo-neurolightstudio-com-36b7295b/cart/CartProvider";
 import { SiteFooter } from "@/components/sites/storify-demo-neurolightstudio-com-36b7295b/shared/SiteFooter";
 import { SiteHeader } from "@/components/sites/storify-demo-neurolightstudio-com-36b7295b/shared/SiteHeader";
 
@@ -46,9 +48,12 @@ export default function RootLayout({
             data-store-theme="electronics"
             data-container="fixed"
           >
-            <SiteHeader />
-            <main className="flex-1">{children}</main>
-            <SiteFooter />
+            <CartProvider>
+              <SiteHeader />
+              <main className="flex-1">{children}</main>
+              <SiteFooter />
+              <CartDrawer />
+            </CartProvider>
           </div>
         </div>
       </body>

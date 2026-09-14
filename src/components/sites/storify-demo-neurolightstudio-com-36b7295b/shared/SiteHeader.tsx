@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { useCart } from "../cart/CartProvider";
 import {
   aiIcon,
   announcement,
@@ -47,6 +48,7 @@ const bottomNav = [
 
 export function SiteHeader() {
   const [collapsed, setCollapsed] = useState(false);
+  const { count, openCart } = useCart();
 
   useEffect(() => {
     const onScroll = () => setCollapsed(window.scrollY > 80);
@@ -228,9 +230,15 @@ export function SiteHeader() {
                         <button
                           type="button"
                           aria-label="Open cart"
-                          className="flex flex-col items-center gap-1 transition-opacity hover:opacity-70"
+                          onClick={openCart}
+                          className="relative flex flex-col items-center gap-1 transition-opacity hover:opacity-70"
                         >
                           <ShoppingCart className="h-6 w-6" />
+                          {count > 0 && (
+                            <span className="absolute -right-2 -top-1.5 grid h-[18px] min-w-[18px] place-items-center rounded-full bg-primary px-1 text-[10px] font-bold leading-none text-primary-foreground">
+                              {count > 99 ? "99+" : count}
+                            </span>
+                          )}
                         </button>
                       </div>
                     </div>
@@ -355,9 +363,15 @@ export function SiteHeader() {
                 <button
                   type="button"
                   aria-label="Open cart"
-                  className="flex flex-col items-center gap-1 transition-opacity hover:opacity-70"
+                  onClick={openCart}
+                  className="relative flex flex-col items-center gap-1 transition-opacity hover:opacity-70"
                 >
                   <ShoppingCart className="h-6 w-6" />
+                  {count > 0 && (
+                    <span className="absolute -right-2 -top-1.5 grid h-[18px] min-w-[18px] place-items-center rounded-full bg-primary px-1 text-[10px] font-bold leading-none text-primary-foreground">
+                      {count > 99 ? "99+" : count}
+                    </span>
+                  )}
                 </button>
               </div>
             </div>
