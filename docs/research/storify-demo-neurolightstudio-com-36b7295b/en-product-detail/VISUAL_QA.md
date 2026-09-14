@@ -22,6 +22,21 @@ Reference: Xiaomi Pad 8 Pro.
 - Route behaviour: prerendered slug 200, on-demand slug (`galaxy-watch9`) 200,
   unknown slug 404 ✅
 
+## Gallery behaviour — verified against the target
+
+| Check | Target | Clone |
+| --- | --- | --- |
+| Cursor over image | `zoom-in` | ✅ `zoom-in` |
+| Hover scale | 680px → 697px (×1.025) | ✅ 676px → 692.9px (×1.025) |
+| Zoom toggle aria | "Enable image zoom" ↔ "Disable image zoom" | ✅ |
+| Zoomed scale | `scale-[1.9]` | ✅ |
+| Origin @ pointer 25%,25% | `2.5% 2.35%` | ✅ `2.5% 2.5%` |
+| Origin @ pointer 75%,70% | `97.5% 87.8623%` | ✅ `97.5% 87.8623%` |
+| Click image | opens fullscreen viewer | ✅ |
+| Viewer buttons | Close / Previous / Next / Open fullscreen image 1-4 | ✅ same 7 |
+| Body scroll lock | `overflow: hidden` | ✅, restored on close |
+| Keyboard | arrows page, Escape closes | ✅ |
+
 ## Known differences
 
 - **Reviews section absent** — deferred by request.

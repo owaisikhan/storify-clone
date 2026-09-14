@@ -59,7 +59,21 @@ Gallery thumbs + prev/next · option pills selecting a real variant (price,
 compare-at, discount and stock all follow) · colour picks swapping the hero
 image · quantity stepper · the three collapsibles · tab switching · related rail.
 
-**Inert (visual only):** Add to Cart, Buy Now, zoom/fullscreen, share buttons.
+### Gallery behaviour (measured, not approximated)
+
+| Control | Behaviour |
+| --- | --- |
+| Image frame | `h-[38vh] max-h-[360px]` → `sm:h-[42vh] max-h-[400px]` → `md:h-[44vh]` → `lg:aspect-square lg:h-auto lg:max-h-[calc(100svh - var(--storefront-header-height,7rem) - 14rem)]`, bg `#f0f0f0` |
+| Image | is itself a `<button>` — `cursor-zoom-in`, aria "Open product gallery fullscreen"; clicking it opens the viewer |
+| Hover | `scale-100 group-hover:scale-[1.025]`, `transition-transform duration-500 ease-out`, `motion-reduce:transition-none` — a 2.5% lift (verified: 680px → 697px on the target, 676px → 692.9px here) |
+| Magnifier | toggles zoom; aria flips "Enable image zoom" ↔ "Disable image zoom" |
+| Zoomed | image becomes `scale-[1.9]`, hover-scale drops, and `transform-origin` tracks the pointer as **origin% = clamp(0, 100, (pointer% − 50) × 1.9 + 50)** — the factor equals the scale, so the frame stays covered. Verified against the target: pointer at 25%,25% → `2.5% 2.5%`; at 75%,70% → `97.5% 87.8623%` (identical) |
+| Expand | aria "Open fullscreen image viewer" — same viewer as clicking the image |
+| Viewer | centered square dialog, `w-[90vw] max-h-[90vh] max-w-[90vh] sm:max-w-3xl`, body `overflow: hidden`, buttons "Close media viewer" / "Previous fullscreen media" / "Next fullscreen media" / "Open fullscreen image N", arrow keys page, Escape closes |
+| Main arrows | aria "Show previous media" / "Show next media", `h-10 w-10` round, `left-3` / `right-3` |
+| Thumbnails | `aspect-4/3 w-[calc(25%-0.75rem)]`, aria "Show image N" — four across |
+
+**Inert (visual only):** Add to Cart, Buy Now, share buttons.
 
 ## Not built yet
 
