@@ -7,7 +7,7 @@ import { Heart, Star } from "lucide-react";
 
 import { vendors, vendorsHeading } from "@/data/site";
 
-import { RailArrows } from "./RailControls";
+import { RailArrows } from "../shared/RailControls";
 
 /**
  * "Top Vendors" — cover image with the vendor logo overlapping its bottom-left,

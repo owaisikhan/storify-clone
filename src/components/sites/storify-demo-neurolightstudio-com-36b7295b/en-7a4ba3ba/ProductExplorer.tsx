@@ -7,7 +7,7 @@ import { explorerFilters, explorerHeading } from "@/data/site";
 import { products } from "@/data/products";
 import { cn } from "@/lib/utils";
 
-import { ProductCard } from "./ProductCard";
+import { ProductCard } from "../shared/ProductCard";
 
 const PAGE_SIZE = 10;
 

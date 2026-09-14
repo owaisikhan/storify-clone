@@ -11,6 +11,10 @@ export interface Product {
   category: string | null;
   categorySlug: string | null;
   vendor: string | null;
+  brand: string | null;
+  brandSlug: string | null;
+  /** true when stock remains (or backorders are allowed) */
+  inStock: boolean;
   image: string | null;
   images: string[];
   /** null when the product is "Price on request" */

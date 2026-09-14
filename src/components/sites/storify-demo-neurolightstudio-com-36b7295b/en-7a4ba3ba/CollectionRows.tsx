@@ -5,7 +5,7 @@ import { collectionRows, collectionsHeading } from "@/data/site";
 import { products } from "@/data/products";
 import { cn } from "@/lib/utils";
 
-import { ProductCard } from "./ProductCard";
+import { ProductCard } from "../shared/ProductCard";
 import { SlideArt, SlideButton, SlideContent, SlideHeading, type SlideVars } from "./Slide";
 
 /**

@@ -13,6 +13,9 @@ export const products: Product[] = [
     "category": "Gaming",
     "categorySlug": "gaming",
     "vendor": "Pixel Forge Computing",
+    "brand": "Sony",
+    "brandSlug": "sony",
+    "inStock": true,
     "image": "/images/chatgpt-image-sep-7-2026-09-43-59-pm-1-7f8ad8.webp",
     "images": [
       "/images/chatgpt-image-sep-7-2026-09-43-59-pm-1-7f8ad8.webp",
@@ -45,6 +48,9 @@ export const products: Product[] = [
     "category": "PC Parts",
     "categorySlug": "pc-parts",
     "vendor": "Pixel Forge Computing",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-sep-7-2026-09-21-54-pm-1-dcde59.webp",
     "images": [
       "/images/chatgpt-image-sep-7-2026-09-21-54-pm-1-dcde59.webp",
@@ -78,6 +84,9 @@ export const products: Product[] = [
     "category": "TV & Audio",
     "categorySlug": "tv-audio",
     "vendor": "Sonic Circuit Audio",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-sep-7-2026-09-13-52-pm-2-3784c8.webp",
     "images": [
       "/images/chatgpt-image-sep-7-2026-09-13-52-pm-2-3784c8.webp",
@@ -123,6 +132,9 @@ export const products: Product[] = [
     "category": "TV & Audio",
     "categorySlug": "tv-audio",
     "vendor": "Sonic Circuit Audio",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-sep-7-2026-08-43-10-pm-1-233149.webp",
     "images": [
       "/images/chatgpt-image-sep-7-2026-08-43-10-pm-1-233149.webp",
@@ -154,6 +166,9 @@ export const products: Product[] = [
     "category": "TV & Audio",
     "categorySlug": "tv-audio",
     "vendor": "Sonic Circuit Audio",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-sep-7-2026-08-33-53-pm-3-839687.webp",
     "images": [
       "/images/chatgpt-image-sep-7-2026-08-33-53-pm-3-839687.webp",
@@ -199,6 +214,9 @@ export const products: Product[] = [
     "category": "TV & Audio",
     "categorySlug": "tv-audio",
     "vendor": "Sonic Circuit Audio",
+    "brand": "Anker",
+    "brandSlug": "anker",
+    "inStock": true,
     "image": "/images/chatgpt-image-sep-7-2026-05-45-45-pm-3-47285a.webp",
     "images": [
       "/images/chatgpt-image-sep-7-2026-05-45-45-pm-3-47285a.webp",
@@ -249,6 +267,9 @@ export const products: Product[] = [
     "category": "Wearable Technology",
     "categorySlug": "wearable-technology",
     "vendor": "Smart Haven Electronics",
+    "brand": "Google",
+    "brandSlug": "google",
+    "inStock": true,
     "image": "/images/chatgpt-image-sep-3-2026-09-39-01-pm-1-82d030.webp",
     "images": [
       "/images/chatgpt-image-sep-3-2026-09-39-01-pm-1-82d030.webp",
@@ -294,6 +315,9 @@ export const products: Product[] = [
     "category": "Wearable Technology",
     "categorySlug": "wearable-technology",
     "vendor": "Smart Haven Electronics",
+    "brand": "Samsung",
+    "brandSlug": "samsung",
+    "inStock": true,
     "image": "/images/chatgpt-image-sep-3-2026-06-07-15-pm-2-bdbaa2.webp",
     "images": [
       "/images/chatgpt-image-sep-3-2026-06-07-15-pm-2-bdbaa2.webp",
@@ -334,6 +358,9 @@ export const products: Product[] = [
     "category": "Laptops. Tablets & PC",
     "categorySlug": "laptops-tablets-pc",
     "vendor": "Storify",
+    "brand": "Apple",
+    "brandSlug": "apple",
+    "inStock": true,
     "image": "/images/chatgpt-image-sep-1-2026-11-34-17-am-2-52b0e1.webp",
     "images": [
       "/images/chatgpt-image-sep-1-2026-11-34-17-am-2-52b0e1.webp",
@@ -384,6 +411,9 @@ export const products: Product[] = [
     "category": "Accessories",
     "categorySlug": "accessories",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-31-2026-02-09-42-pm-2-e654b8.webp",
     "images": [
       "/images/chatgpt-image-aug-31-2026-02-09-42-pm-2-e654b8.webp",
@@ -417,6 +447,9 @@ export const products: Product[] = [
     "category": "Laptops. Tablets & PC",
     "categorySlug": "laptops-tablets-pc",
     "vendor": "Storify",
+    "brand": "Xioami",
+    "brandSlug": "xioami",
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-31-2026-06-54-05-pm-1-7fc558.webp",
     "images": [
       "/images/chatgpt-image-aug-31-2026-06-54-05-pm-1-7fc558.webp",
@@ -462,6 +495,9 @@ export const products: Product[] = [
     "category": "PC Parts",
     "categorySlug": "pc-parts",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-31-2026-05-01-36-pm-4-e37baf.webp",
     "images": [
       "/images/chatgpt-image-aug-31-2026-05-01-36-pm-4-e37baf.webp",
@@ -504,6 +540,9 @@ export const products: Product[] = [
     "category": "Wearable Technology",
     "categorySlug": "wearable-technology",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-31-2026-01-45-51-pm-3-2d55cb.webp",
     "images": [
       "/images/chatgpt-image-aug-31-2026-01-45-51-pm-3-2d55cb.webp",
@@ -549,6 +588,9 @@ export const products: Product[] = [
     "category": "Samsung",
     "categorySlug": "samsung",
     "vendor": "Storify",
+    "brand": "Samsung",
+    "brandSlug": "samsung",
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-31-2026-12-56-47-pm-3-bb1afd.webp",
     "images": [
       "/images/chatgpt-image-aug-31-2026-12-56-47-pm-3-bb1afd.webp",
@@ -599,6 +641,9 @@ export const products: Product[] = [
     "category": "Accessories",
     "categorySlug": "accessories",
     "vendor": "Storify",
+    "brand": "Apple",
+    "brandSlug": "apple",
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-31-2026-12-21-23-pm-2-d17d72.webp",
     "images": [
       "/images/chatgpt-image-aug-31-2026-12-21-23-pm-2-d17d72.webp",
@@ -631,6 +676,9 @@ export const products: Product[] = [
     "category": "Gaming",
     "categorySlug": "gaming",
     "vendor": "Storify",
+    "brand": "Sony",
+    "brandSlug": "sony",
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-31-2026-11-25-48-am-2-05cb18.webp",
     "images": [
       "/images/chatgpt-image-aug-31-2026-11-25-48-am-2-05cb18.webp",
@@ -663,6 +711,9 @@ export const products: Product[] = [
     "category": "Accessories",
     "categorySlug": "accessories",
     "vendor": "Storify",
+    "brand": "Samsung",
+    "brandSlug": "samsung",
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-30-2026-07-05-28-pm-227f7e.webp",
     "images": [
       "/images/chatgpt-image-aug-30-2026-07-05-28-pm-227f7e.webp",
@@ -717,6 +768,9 @@ export const products: Product[] = [
     "category": "Accessories",
     "categorySlug": "accessories",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-30-2026-06-38-38-pm-1-6d6e33.webp",
     "images": [
       "/images/chatgpt-image-aug-30-2026-06-38-38-pm-1-6d6e33.webp",
@@ -748,6 +802,9 @@ export const products: Product[] = [
     "category": "Appliances",
     "categorySlug": "appliances",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-30-2026-06-18-47-pm-3-70f868.webp",
     "images": [
       "/images/chatgpt-image-aug-30-2026-06-18-47-pm-3-70f868.webp",
@@ -780,6 +837,9 @@ export const products: Product[] = [
     "category": "Gaming",
     "categorySlug": "gaming",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-30-2026-05-58-25-pm-1-396795.webp",
     "images": [
       "/images/chatgpt-image-aug-30-2026-05-58-25-pm-1-396795.webp",
@@ -813,6 +873,9 @@ export const products: Product[] = [
     "category": "Gaming",
     "categorySlug": "gaming",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-30-2026-05-38-31-pm-1-3ab853.webp",
     "images": [
       "/images/chatgpt-image-aug-30-2026-05-38-31-pm-1-3ab853.webp",
@@ -844,6 +907,9 @@ export const products: Product[] = [
     "category": "Laptops. Tablets & PC",
     "categorySlug": "laptops-tablets-pc",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-30-2026-04-53-59-pm-4-310652.webp",
     "images": [
       "/images/chatgpt-image-aug-30-2026-04-53-59-pm-4-310652.webp",
@@ -877,6 +943,9 @@ export const products: Product[] = [
     "category": "Laptops. Tablets & PC",
     "categorySlug": "laptops-tablets-pc",
     "vendor": "Storify",
+    "brand": "Acer",
+    "brandSlug": "acer",
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-30-2026-04-32-43-pm-3-4e08f7.webp",
     "images": [
       "/images/chatgpt-image-aug-30-2026-04-32-43-pm-3-4e08f7.webp",
@@ -910,6 +979,9 @@ export const products: Product[] = [
     "category": "Appliances",
     "categorySlug": "appliances",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-30-2026-03-54-04-pm-1-4afdd6.webp",
     "images": [
       "/images/chatgpt-image-aug-30-2026-03-54-04-pm-1-4afdd6.webp",
@@ -941,6 +1013,9 @@ export const products: Product[] = [
     "category": "TV & Audio",
     "categorySlug": "tv-audio",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-30-2026-03-29-48-pm-2-cef61d.webp",
     "images": [
       "/images/chatgpt-image-aug-30-2026-03-29-48-pm-2-cef61d.webp",
@@ -999,6 +1074,9 @@ export const products: Product[] = [
     "category": "Wearable Technology",
     "categorySlug": "wearable-technology",
     "vendor": "Storify",
+    "brand": "Apple",
+    "brandSlug": "apple",
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-30-2026-02-08-15-pm-1-875780.webp",
     "images": [
       "/images/chatgpt-image-aug-30-2026-02-08-15-pm-1-875780.webp",
@@ -1044,6 +1122,9 @@ export const products: Product[] = [
     "category": "Accessories",
     "categorySlug": "accessories",
     "vendor": "Storify",
+    "brand": "Anker",
+    "brandSlug": "anker",
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-30-2026-01-51-09-pm-2-9270a5.webp",
     "images": [
       "/images/chatgpt-image-aug-30-2026-01-51-09-pm-2-9270a5.webp",
@@ -1075,6 +1156,9 @@ export const products: Product[] = [
     "category": "Oneplus",
     "categorySlug": "oneplus",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-30-2026-12-12-02-pm-1-71c1d3.webp",
     "images": [
       "/images/chatgpt-image-aug-30-2026-12-12-02-pm-1-71c1d3.webp",
@@ -1120,6 +1204,9 @@ export const products: Product[] = [
     "category": "Laptops. Tablets & PC",
     "categorySlug": "laptops-tablets-pc",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-29-2026-09-07-07-pm-2-2e2805.webp",
     "images": [
       "/images/chatgpt-image-aug-29-2026-09-07-07-pm-2-2e2805.webp",
@@ -1152,6 +1239,9 @@ export const products: Product[] = [
     "category": "Laptops. Tablets & PC",
     "categorySlug": "laptops-tablets-pc",
     "vendor": "Storify",
+    "brand": "Apple",
+    "brandSlug": "apple",
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-29-2026-06-52-56-pm-2-42b7f8.webp",
     "images": [
       "/images/chatgpt-image-aug-29-2026-06-52-56-pm-2-42b7f8.webp",
@@ -1192,6 +1282,9 @@ export const products: Product[] = [
     "category": "PC Parts",
     "categorySlug": "pc-parts",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-29-2026-06-32-27-pm-faa11c.webp",
     "images": [
       "/images/chatgpt-image-aug-29-2026-06-32-27-pm-faa11c.webp"
@@ -1222,6 +1315,9 @@ export const products: Product[] = [
     "category": "PC Parts",
     "categorySlug": "pc-parts",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-29-2026-06-25-08-pm-2-fbcbe4.webp",
     "images": [
       "/images/chatgpt-image-aug-29-2026-06-25-08-pm-2-fbcbe4.webp",
@@ -1254,6 +1350,9 @@ export const products: Product[] = [
     "category": "Laptops. Tablets & PC",
     "categorySlug": "laptops-tablets-pc",
     "vendor": "Storify",
+    "brand": "Apple",
+    "brandSlug": "apple",
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-29-2026-06-12-58-pm-1-46a0d9.webp",
     "images": [
       "/images/chatgpt-image-aug-29-2026-06-12-58-pm-1-46a0d9.webp",
@@ -1294,6 +1393,9 @@ export const products: Product[] = [
     "category": "Laptops. Tablets & PC",
     "categorySlug": "laptops-tablets-pc",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-29-2026-05-51-55-pm-1-144b73.webp",
     "images": [
       "/images/chatgpt-image-aug-29-2026-05-51-55-pm-1-144b73.webp",
@@ -1326,6 +1428,9 @@ export const products: Product[] = [
     "category": "Cameras & Smart Home",
     "categorySlug": "cameras-smart-home",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-29-2026-05-40-54-pm-1-e66990.webp",
     "images": [
       "/images/chatgpt-image-aug-29-2026-05-40-54-pm-1-e66990.webp",
@@ -1357,6 +1462,9 @@ export const products: Product[] = [
     "category": "Accessories",
     "categorySlug": "accessories",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-29-2026-05-32-09-pm-1-68a344.webp",
     "images": [
       "/images/chatgpt-image-aug-29-2026-05-32-09-pm-1-68a344.webp",
@@ -1388,6 +1496,9 @@ export const products: Product[] = [
     "category": "TV & Audio",
     "categorySlug": "tv-audio",
     "vendor": "Storify",
+    "brand": "Anker",
+    "brandSlug": "anker",
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-29-2026-01-45-00-pm-1-579448.webp",
     "images": [
       "/images/chatgpt-image-aug-29-2026-01-45-00-pm-1-579448.webp",
@@ -1433,6 +1544,9 @@ export const products: Product[] = [
     "category": "Laptops. Tablets & PC",
     "categorySlug": "laptops-tablets-pc",
     "vendor": "Storify",
+    "brand": "Apple",
+    "brandSlug": "apple",
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-29-2026-12-46-56-pm-1-ceec3c.webp",
     "images": [
       "/images/chatgpt-image-aug-29-2026-12-46-56-pm-1-ceec3c.webp",
@@ -1483,6 +1597,9 @@ export const products: Product[] = [
     "category": "Xiaomi",
     "categorySlug": "xiaomi",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-29-2026-12-20-19-pm-1-04a241.webp",
     "images": [
       "/images/chatgpt-image-aug-29-2026-12-20-19-pm-1-04a241.webp",
@@ -1523,6 +1640,9 @@ export const products: Product[] = [
     "category": "Iphone",
     "categorySlug": "iphone",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-29-2026-11-42-24-am-4-185c09.webp",
     "images": [
       "/images/chatgpt-image-aug-29-2026-11-42-24-am-4-185c09.webp",
@@ -1573,6 +1693,9 @@ export const products: Product[] = [
     "category": "Gaming",
     "categorySlug": "gaming",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-28-2026-05-49-09-pm-1-ddc5e8.webp",
     "images": [
       "/images/chatgpt-image-aug-28-2026-05-49-09-pm-1-ddc5e8.webp",
@@ -1606,6 +1729,9 @@ export const products: Product[] = [
     "category": "Samsung",
     "categorySlug": "samsung",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/1778940240879-og4zky-galaxy-s26-ultra-black-4396-bfa095.webp",
     "images": [
       "/images/1778940240879-og4zky-galaxy-s26-ultra-black-4396-bfa095.webp",
@@ -1656,6 +1782,9 @@ export const products: Product[] = [
     "category": "Google",
     "categorySlug": "google",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-28-2026-05-02-15-pm-2-a13303.webp",
     "images": [
       "/images/chatgpt-image-aug-28-2026-05-02-15-pm-2-a13303.webp",
@@ -1706,6 +1835,9 @@ export const products: Product[] = [
     "category": "Iphone",
     "categorySlug": "iphone",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-28-2026-04-26-03-pm-1-659a3c.webp",
     "images": [
       "/images/chatgpt-image-aug-28-2026-04-26-03-pm-1-659a3c.webp",
@@ -1756,6 +1888,9 @@ export const products: Product[] = [
     "category": "Iphone",
     "categorySlug": "iphone",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-28-2026-04-01-47-pm-4-cb83a1.webp",
     "images": [
       "/images/chatgpt-image-aug-28-2026-04-01-47-pm-4-cb83a1.webp",
@@ -1806,6 +1941,9 @@ export const products: Product[] = [
     "category": "Iphone",
     "categorySlug": "iphone",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/chatgpt-image-aug-28-2026-03-55-02-pm-3-e54e33.webp",
     "images": [
       "/images/chatgpt-image-aug-28-2026-03-55-02-pm-3-e54e33.webp",
@@ -1851,6 +1989,9 @@ export const products: Product[] = [
     "category": "Laptops. Tablets & PC",
     "categorySlug": "laptops-tablets-pc",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/ipad-air-m3-2025aa-6321-removebg-preview-e8c600.webp",
     "images": [
       "/images/ipad-air-m3-2025aa-6321-removebg-preview-e8c600.webp",
@@ -1901,6 +2042,9 @@ export const products: Product[] = [
     "category": "TV & Audio",
     "categorySlug": "tv-audio",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/1779101099879-yrzkr5-haier-h55m80fux-55-inch-min-d1111a.png",
     "images": [
       "/images/1779101099879-yrzkr5-haier-h55m80fux-55-inch-min-d1111a.png",
@@ -1933,6 +2077,9 @@ export const products: Product[] = [
     "category": "Appliances",
     "categorySlug": "appliances",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": null,
     "images": [],
     "price": 700,
@@ -1961,6 +2108,9 @@ export const products: Product[] = [
     "category": "Cameras & Smart Home",
     "categorySlug": "cameras-smart-home",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": false,
     "image": "/images/1779089530697-ygqfca-insta360-go-3s-c-7102-a3da19.png",
     "images": [
       "/images/1779089530697-ygqfca-insta360-go-3s-c-7102-a3da19.png",
@@ -2005,6 +2155,9 @@ export const products: Product[] = [
     "category": "Phones",
     "categorySlug": "phones",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/1779088662375-k6xoyi-nothing-phone-4a-proa-2762-17477b.png",
     "images": [
       "/images/1779088662375-k6xoyi-nothing-phone-4a-proa-2762-17477b.png",
@@ -2050,6 +2203,9 @@ export const products: Product[] = [
     "category": "Wearable Technology",
     "categorySlug": "wearable-technology",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": false,
     "image": "/images/1779087890471-54ndxv-cmf-by-nothing-watch-pro-2--dcbe69.png",
     "images": [
       "/images/1779087890471-54ndxv-cmf-by-nothing-watch-pro-2--dcbe69.png",
@@ -2083,6 +2239,9 @@ export const products: Product[] = [
     "category": "Wearable Technology",
     "categorySlug": "wearable-technology",
     "vendor": "Storify",
+    "brand": "Samsung",
+    "brandSlug": "samsung",
+    "inStock": true,
     "image": "/images/1779021764635-uk1o9w-galaxy-watch7-green-8018-7df07c.png",
     "images": [
       "/images/1779021764635-uk1o9w-galaxy-watch7-green-8018-7df07c.png",
@@ -2128,6 +2287,9 @@ export const products: Product[] = [
     "category": "Wearable Technology",
     "categorySlug": "wearable-technology",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/1779020556151-ga0c1c-apple-watch-se-3-9687-f421a7.png",
     "images": [
       "/images/1779020556151-ga0c1c-apple-watch-se-3-9687-f421a7.png",
@@ -2168,6 +2330,9 @@ export const products: Product[] = [
     "category": "Cameras & Smart Home",
     "categorySlug": "cameras-smart-home",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/1778945184371-2uxsdj-dji-osmo-pocket-3-action-ca-932687.png",
     "images": [
       "/images/1778945184371-2uxsdj-dji-osmo-pocket-3-action-ca-932687.png",
@@ -2200,6 +2365,9 @@ export const products: Product[] = [
     "category": "Cameras & Smart Home",
     "categorySlug": "cameras-smart-home",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/1778944924281-n9u9k8-dji-osmo-nano-action-camera-cd8390.png",
     "images": [
       "/images/1778944924281-n9u9k8-dji-osmo-nano-action-camera-cd8390.png",
@@ -2232,6 +2400,9 @@ export const products: Product[] = [
     "category": "Cameras & Smart Home",
     "categorySlug": "cameras-smart-home",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/1778944598338-x1zkyc-dji-osmo-action-6-adventure-1d6b3c.png",
     "images": [
       "/images/1778944598338-x1zkyc-dji-osmo-action-6-adventure-1d6b3c.png",
@@ -2264,6 +2435,9 @@ export const products: Product[] = [
     "category": "Samsung",
     "categorySlug": "samsung",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/1778944293233-n9ip4p-galaxy-a57-5g-6910-c680a1.png",
     "images": [
       "/images/1778944293233-n9ip4p-galaxy-a57-5g-6910-c680a1.png",
@@ -2314,6 +2488,9 @@ export const products: Product[] = [
     "category": "Iphone",
     "categorySlug": "iphone",
     "vendor": "Storify",
+    "brand": null,
+    "brandSlug": null,
+    "inStock": true,
     "image": "/images/1778943532357-q8wnvt-iphone-16-proaaaa-3664-9776c7.png",
     "images": [
       "/images/1778943532357-q8wnvt-iphone-16-proaaaa-3664-9776c7.png",

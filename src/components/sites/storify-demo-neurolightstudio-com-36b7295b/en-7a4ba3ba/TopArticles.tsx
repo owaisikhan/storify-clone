@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 import { articles, articlesCta, articlesHeading } from "@/data/site";
 
-import { RailArrows } from "./RailControls";
+import { RailArrows } from "../shared/RailControls";
 
 /** "Top Articles" — snap rail of blog cards with author row and Read More. */
 export function TopArticles() {

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { categories } from "@/data/site";
 
-import { Rail } from "./RailControls";
+import { Rail } from "../shared/RailControls";
 
 /**
  * "Shop by Categories" — circular thumbnails in a snap rail.

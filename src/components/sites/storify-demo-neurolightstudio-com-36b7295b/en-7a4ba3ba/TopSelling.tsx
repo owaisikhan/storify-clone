@@ -6,8 +6,8 @@ import { topSellingBySlug, topSellingTabs } from "@/data/site";
 import { products } from "@/data/products";
 import { cn } from "@/lib/utils";
 
-import { ProductCard } from "./ProductCard";
-import { RailArrows } from "./RailControls";
+import { ProductCard } from "../shared/ProductCard";
+import { RailArrows } from "../shared/RailControls";
 
 /**
  * "Top Selling" — pill tabs over a horizontal product rail.

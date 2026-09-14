@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import { SiteFooter } from "@/components/sites/storify-demo-neurolightstudio-com-36b7295b/shared/SiteFooter";
+import { SiteHeader } from "@/components/sites/storify-demo-neurolightstudio-com-36b7295b/shared/SiteHeader";
+
 // Target site loads Inter as its body/heading family and Geist Mono for the
 // coupon code chip (computed font-family: inter, "inter Fallback").
 const inter = Inter({
@@ -21,6 +24,11 @@ export const metadata: Metadata = {
   description: "Multi-vendor E-commerce Platform",
 };
 
+/**
+ * Root layout. The storefront chrome (announcement bar, sticky header, footer)
+ * lives here inside the .store-surface wrapper, so every route inherits it —
+ * mirroring the target, where the same chrome wraps every page.
+ */
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -31,7 +39,19 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <div className="min-h-screen">
+          <div
+            className="store-surface flex min-h-screen flex-col bg-background"
+            data-store-theme="electronics"
+            data-container="fixed"
+          >
+            <SiteHeader />
+            <main className="flex-1">{children}</main>
+            <SiteFooter />
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
