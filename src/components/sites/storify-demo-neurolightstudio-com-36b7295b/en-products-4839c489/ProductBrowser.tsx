@@ -59,6 +59,8 @@ export function ProductBrowser() {
   const initialCategory = categoryEntries.find(
     (c) => c.slug === params.get("category"),
   )?.label;
+  // the header search lands here as ?search=<q>, as it does on the target
+  const search = (params.get("search") ?? "").trim();
 
   const [filters, setFilters] = useState<FilterState>(
     initialCategory ? { ...EMPTY, categories: [initialCategory] } : EMPTY,
@@ -80,7 +82,9 @@ export function ProductBrowser() {
     const sortPrice = (p: (typeof products)[number], dir: 1 | -1) =>
       p.price ?? (dir === 1 ? Number.POSITIVE_INFINITY : Number.NEGATIVE_INFINITY);
 
+    const needle = search.toLowerCase();
     const filtered = products.filter((p) => {
+      if (needle && !p.name.toLowerCase().includes(needle)) return false;
       if (filters.categories.length && !filters.categories.includes(p.category ?? ""))
         return false;
       if (filters.brands.length && !filters.brands.includes(p.brand ?? ""))
@@ -118,7 +122,7 @@ export function ProductBrowser() {
         );
     }
     return sorted;
-  }, [filters, sort]);
+  }, [filters, sort, search]);
 
   const pageCount = Math.max(1, Math.ceil(results.length / PAGE_SIZE));
   const current = Math.min(page, pageCount);

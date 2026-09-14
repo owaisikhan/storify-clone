@@ -13,7 +13,6 @@ import {
   Package,
   Rss,
   House,
-  Search,
   ShoppingCart,
   User,
 } from "lucide-react";
@@ -22,8 +21,8 @@ import { cn } from "@/lib/utils";
 import { useCart } from "../cart/CartProvider";
 import { useCompare } from "../en-account/CompareProvider";
 import { CategoriesMenu, CollectionsMenu } from "./NavMenus";
+import { SearchBox } from "./SearchBox";
 import {
-  aiIcon,
   announcement,
   announcementGradient,
   logo,
@@ -152,46 +151,7 @@ export function SiteHeader() {
                         </span>
                       </button>
 
-                      <form className="relative min-w-0 flex-1">
-                        <div
-                          className="flex items-center gap-2 pl-4 pr-1.5"
-                          style={{
-                            height: "44px",
-                            borderRadius: "10px",
-                            border: "1px solid #f3f3f3",
-                            backgroundColor: "#F3F3F3",
-                            color: "#111827",
-                          }}
-                        >
-                          <input
-                            type="search"
-                            placeholder="Search products..."
-                            className="min-w-0 flex-1 bg-transparent outline-none placeholder:opacity-80"
-                            style={{
-                              fontSize: "14px",
-                              fontWeight: 400,
-                              color: "#949494",
-                            }}
-                          />
-                          <div className="flex shrink-0 items-center border-l border-current/20 pl-2 opacity-80">
-                            <button
-                              type="button"
-                              aria-label="Categories: All Categories"
-                              className="flex max-w-36 items-center gap-1 rounded-sm px-1 py-1 text-xs font-medium outline-none"
-                            >
-                              <span className="truncate">All Categories</span>
-                              <ChevronDown className="h-4 w-4" />
-                            </button>
-                          </div>
-                          <button
-                            type="submit"
-                            aria-label="Search products..."
-                            className="grid h-8 w-8 shrink-0 place-items-center rounded-full transition-opacity hover:opacity-70"
-                          >
-                            <Search className="h-4 w-4" />
-                          </button>
-                        </div>
-                      </form>
+                      <SearchBox />
                     </div>
 
                     <div className="flex flex-row flex-nowrap items-center justify-end gap-5">
@@ -397,23 +357,9 @@ export function SiteHeader() {
                 </button>
               </div>
             </div>
-            <form className="pb-3">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 opacity-60" />
-                <input
-                  type="search"
-                  placeholder="Search products..."
-                  className="h-10 w-full rounded-full border border-[#dddddd] bg-transparent pl-11 pr-12 text-sm outline-none placeholder:opacity-70 dark:border-white/15"
-                />
-                <button
-                  type="button"
-                  aria-label="AI search"
-                  className="absolute right-2 top-1/2 grid h-7 w-7 -translate-y-1/2 place-items-center rounded-full text-fuchsia-500 transition-colors hover:text-fuchsia-600"
-                >
-                  <Image src={aiIcon} alt="" width={24} height={24} />
-                </button>
-              </div>
-            </form>
+            <div className="pb-3">
+              <SearchBox variant="mobile" />
+            </div>
             <div className="-mt-1 pb-2">
               <button
                 type="button"
