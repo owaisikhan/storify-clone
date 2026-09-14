@@ -188,3 +188,19 @@ export interface BlogPost {
   /** the site's own rich-text markup for the post body */
   body: string;
 }
+
+export interface VendorStore {
+  slug: string;
+  name: string;
+  description: string;
+  /** null where the target shows no banner (as "lee jhon moda" does) */
+  cover: string | null;
+  /** null where the target falls back to the store's initial */
+  logo: string | null;
+  location: string;
+  /** e.g. "Ships in 2–5 days" — only some stores publish one */
+  shipsLabel: string | null;
+  rating: string | null;
+  reviewCount: number;
+  sold: number;
+}
