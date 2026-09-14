@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { ChevronDown, Search } from "lucide-react";
 
 import { categoryEntries } from "@/data/categories";
@@ -44,6 +45,44 @@ const SCOPE_SLUGS = [
 
 const LIMIT = 6;
 
+/**
+ * The desktop search sits inside the header's `min-h-0 overflow-hidden` collapse
+ * wrapper, which clips any popover rendered inside it to the 64px row. Both
+ * panels are therefore portalled to the body and positioned from the trigger's
+ * rect, re-measured on scroll and resize.
+ */
+function useAnchor(ref: React.RefObject<HTMLElement | null>, open: boolean) {
+  const [rect, setRect] = useState<DOMRect | null>(null);
+
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+    const measure = () => setRect(ref.current?.getBoundingClientRect() ?? null);
+    const raf = requestAnimationFrame(measure);
+    window.addEventListener("scroll", measure, true);
+    window.addEventListener("resize", measure);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("scroll", measure, true);
+      window.removeEventListener("resize", measure);
+    };
+  }, [open, ref]);
+
+  return rect;
+}
+
+function Portal({ children }: { children: React.ReactNode }) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    const raf = requestAnimationFrame(() => setMounted(true));
+    return () => cancelAnimationFrame(raf);
+  }, []);
+  if (!mounted) return null;
+  return createPortal(children, document.body);
+}
+
+
 export function SearchBox({ variant = "desktop" }: { variant?: "desktop" | "mobile" }) {
   const router = useRouter();
   const listId = useId();
@@ -52,6 +91,8 @@ export function SearchBox({ variant = "desktop" }: { variant?: "desktop" | "mobi
   const [open, setOpen] = useState(false);
   const [scopeOpen, setScopeOpen] = useState(false);
   const wrapper = useRef<HTMLDivElement>(null);
+  const fieldRef = useRef<HTMLDivElement>(null);
+  const chipRef = useRef<HTMLButtonElement>(null);
 
   const scopes = useMemo(
     () =>
@@ -78,7 +119,9 @@ export function SearchBox({ variant = "desktop" }: { variant?: "desktop" | "mobi
   useEffect(() => {
     if (!open && !scopeOpen) return;
     const onDown = (e: MouseEvent) => {
-      if (!wrapper.current?.contains(e.target as Node)) {
+      const node = e.target as HTMLElement | null;
+      if (node?.closest("[data-searchbox-panel]")) return;
+      if (!wrapper.current?.contains(node)) {
         setOpen(false);
         setScopeOpen(false);
       }
@@ -107,6 +150,8 @@ export function SearchBox({ variant = "desktop" }: { variant?: "desktop" | "mobi
   };
 
   const suggestions = open && query.trim().length > 0;
+  const fieldRect = useAnchor(fieldRef, suggestions);
+  const chipRect = useAnchor(chipRef, scopeOpen);
 
   return (
     <div ref={wrapper} className="relative min-w-0 flex-1">
@@ -119,6 +164,7 @@ export function SearchBox({ variant = "desktop" }: { variant?: "desktop" | "mobi
       >
         {variant === "desktop" ? (
           <div
+            ref={fieldRef}
             className="flex items-center gap-2 pl-4 pr-1.5"
             style={{
               height: "44px",
@@ -146,6 +192,7 @@ export function SearchBox({ variant = "desktop" }: { variant?: "desktop" | "mobi
             />
             <div className="relative flex shrink-0 items-center border-l border-current/20 pl-2">
               <button
+                ref={chipRef}
                 type="button"
                 aria-label={`Categories: ${scopeLabel}`}
                 aria-expanded={scopeOpen}
@@ -159,10 +206,18 @@ export function SearchBox({ variant = "desktop" }: { variant?: "desktop" | "mobi
                 <ChevronDown className="h-4 w-4" />
               </button>
 
-              {scopeOpen && (
+              {scopeOpen && chipRect && (
+                <Portal>
                 <div
                   role="menu"
-                  className="absolute right-0 top-[calc(100%+10px)] z-50 max-h-[279px] w-60 overflow-y-auto rounded-md border border-border bg-background p-1 text-foreground shadow-md"
+                  data-searchbox-panel=""
+                  style={{
+                    position: "fixed",
+                    top: chipRect.bottom + 10,
+                    left: Math.max(8, chipRect.right - 240),
+                    width: 240,
+                  }}
+                  className="z-[100] max-h-[279px] overflow-y-auto rounded-md border border-border bg-background p-1 text-foreground shadow-md"
                 >
                   {[{ slug: null, label: "All Categories" }, ...scopes].map((s) => (
                     <button
@@ -184,6 +239,7 @@ export function SearchBox({ variant = "desktop" }: { variant?: "desktop" | "mobi
                     </button>
                   ))}
                 </div>
+                </Portal>
               )}
             </div>
             <button
@@ -195,7 +251,7 @@ export function SearchBox({ variant = "desktop" }: { variant?: "desktop" | "mobi
             </button>
           </div>
         ) : (
-          <div className="relative">
+          <div ref={fieldRef} className="relative">
             <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 opacity-60" />
             <input
               type="search"
@@ -220,11 +276,19 @@ export function SearchBox({ variant = "desktop" }: { variant?: "desktop" | "mobi
         )}
       </form>
 
-      {suggestions && (
+      {suggestions && fieldRect && (
+        <Portal>
         <div
           id={listId}
           role="listbox"
-          className="absolute left-0 right-0 top-full z-50 mt-2 overflow-hidden rounded-2xl border border-border bg-background text-foreground shadow-lg"
+          data-searchbox-panel=""
+          style={{
+            position: "fixed",
+            top: fieldRect.bottom + 8,
+            left: fieldRect.left,
+            width: fieldRect.width,
+          }}
+          className="z-[100] overflow-hidden rounded-2xl border border-border bg-background text-foreground shadow-lg"
         >
           {matches.length > 0 ? (
             <>
@@ -277,6 +341,7 @@ export function SearchBox({ variant = "desktop" }: { variant?: "desktop" | "mobi
             </p>
           )}
         </div>
+        </Portal>
       )}
     </div>
   );
