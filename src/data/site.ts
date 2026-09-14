@@ -111,11 +111,18 @@ export const heroSlides: HeroSlide[] = [
   },
 ];
 
+/**
+ * The promo tiles were captured linking to /en/collections/iphones,
+ * /apple-watches and /laptops — slugs that 404 on the target itself. They are
+ * retargeted here to the real destinations: the iPhone Lineup and Smart Watches
+ * collections, and the Laptops. Tablets & PC category (no laptops collection
+ * exists).
+ */
 export const heroPromos: PromoTile[] = [
   {
     title: "iPhones",
     cta: "Buy Now",
-    href: "/en/collections/iphones",
+    href: "/en/collections/iphone-lineup",
     image: "/images/image-326-c82604.webp",
     background:
       "linear-gradient(225deg, rgb(243, 243, 243) 0%, rgb(227, 230, 232) 100%)",
@@ -123,7 +130,7 @@ export const heroPromos: PromoTile[] = [
   {
     title: "Apple Watches",
     cta: "Buy Now",
-    href: "/en/collections/apple-watches",
+    href: "/en/collections/smart-watches",
     image: "/images/rectangle-236-0d771e.webp",
     background:
       "linear-gradient(180deg, rgb(200, 228, 255) 0%, rgb(236, 255, 152) 100%)",
@@ -270,7 +277,7 @@ export const collectionRows: {
     promo: {
       title: "iPhones",
       cta: "Buy Now",
-      href: "/en/collections/iphones",
+      href: "/en/collections/iphone-lineup",
       image: "/images/image-326-c82604.webp",
       background:
         "linear-gradient(225deg, rgb(243, 243, 243) 0%, rgb(227, 230, 232) 100%)",
@@ -281,7 +288,7 @@ export const collectionRows: {
     promo: {
       title: "Apple Watches",
       cta: "Buy Now",
-      href: "/en/collections/apple-watches",
+      href: "/en/collections/smart-watches",
       image: "/images/rectangle-236-0d771e.webp",
       background:
         "linear-gradient(180deg, rgb(200, 228, 255) 0%, rgb(236, 255, 152) 100%)",
@@ -299,7 +306,7 @@ export const collectionRows: {
       // tile renders image-only on the live page.
       title: "",
       cta: "",
-      href: "/en/collections/laptops",
+      href: "/en/categories/laptops-tablets-pc",
       image: "/images/frame-694-a279f5.webp",
       background: "transparent",
       textClassName: "text-white",
