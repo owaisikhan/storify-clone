@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import type { Product } from "@/types/storify";
 
 import { useCart } from "../cart/CartProvider";
+import { useCompare } from "../en-account/CompareProvider";
 import { useWishlist } from "../en-account/WishlistProvider";
 
 /**
@@ -23,6 +24,8 @@ export function ProductCard({ product }: { product: Product }) {
   const { add } = useCart();
   const wishlist = useWishlist();
   const wished = wishlist.has(product.slug);
+  const compare = useCompare();
+  const compared = compare.has(product.slug);
 
   // The card is one big <a>, so the hover action is a role="button" span:
   // nesting a real <button> inside an anchor is invalid markup.
@@ -102,10 +105,21 @@ export function ProductCard({ product }: { product: Product }) {
           </button>
           <button
             type="button"
-            aria-label="Add to comparison"
+            aria-label={compared ? "Remove from comparison" : "Add to comparison"}
+            aria-pressed={compared}
+            title={
+              !compared && compare.full
+                ? "Comparison is full — remove one to add another"
+                : undefined
+            }
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              compare.toggle(product.slug);
+            }}
             className="absolute right-2 top-11 flex h-7 w-7 items-center justify-center rounded-full border border-border/60 bg-background/80 text-muted-foreground shadow-sm backdrop-blur transition-all duration-300 hover:bg-background hover:text-foreground active:scale-90 sm:right-3 sm:top-16 sm:h-10 sm:w-10 [@media(hover:hover)]:pointer-events-none [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover:pointer-events-auto [@media(hover:hover)]:group-hover:opacity-100"
           >
-            <Scale className="h-3.5 w-3.5 sm:h-5 sm:w-5" />
+            <Scale className={cn("h-3.5 w-3.5 sm:h-5 sm:w-5", compared && "text-primary")} />
           </button>
 
           <div

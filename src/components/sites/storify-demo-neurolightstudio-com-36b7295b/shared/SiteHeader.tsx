@@ -8,7 +8,6 @@ import {
   ChevronDown,
   Heart,
   MapPin,
-  Menu,
   Menu as MenuIcon,
   Moon,
   Package,
@@ -21,6 +20,8 @@ import {
 
 import { cn } from "@/lib/utils";
 import { useCart } from "../cart/CartProvider";
+import { useCompare } from "../en-account/CompareProvider";
+import { CategoriesMenu, CollectionsMenu } from "./NavMenus";
 import {
   aiIcon,
   announcement,
@@ -49,6 +50,7 @@ const bottomNav = [
 export function SiteHeader() {
   const [collapsed, setCollapsed] = useState(false);
   const { count, openCart } = useCart();
+  const compare = useCompare();
 
   // Collapsing removes the ~64px search row from the flow, which nudges the
   // scroll position back below a single threshold and re-expands the header —
@@ -210,10 +212,19 @@ export function SiteHeader() {
                         </Link>
                         <Link
                           href="/en/compare"
-                          aria-label="Compare"
+                          aria-label={
+                            compare.count
+                              ? `Compare (${compare.count})`
+                              : "Compare"
+                          }
                           className="relative flex shrink-0 items-center transition-opacity hover:opacity-70"
                         >
                           <ArrowLeftRight className="h-5 w-5" />
+                          {compare.count > 0 && (
+                            <span className="absolute -right-2 -top-1.5 grid h-[18px] min-w-[18px] place-items-center rounded-full bg-primary px-1 text-[10px] font-bold leading-none text-primary-foreground">
+                              {compare.count}
+                            </span>
+                          )}
                         </Link>
                       </div>
                       <div className="shrink-0">
@@ -273,9 +284,8 @@ export function SiteHeader() {
                   }}
                 >
                   <div className="flex flex-row flex-nowrap items-center justify-start gap-4">
-                    <button
-                      type="button"
-                      className="flex min-w-0 flex-1 items-center gap-3 px-5 text-left transition-opacity hover:opacity-90"
+                    <div
+                      className="min-w-0 flex-1"
                       style={{
                         height: "44px",
                         borderRadius: "10px",
@@ -285,19 +295,10 @@ export function SiteHeader() {
                         color: "#ffffff",
                       }}
                     >
-                      <Menu className="h-5 w-5" />
-                      <span className="min-w-0 flex-1 truncate">All Categories</span>
-                      <ChevronDown className="h-4 w-4" />
-                    </button>
-                    <span>
-                      <button
-                        type="button"
-                        className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap transition-opacity hover:opacity-75"
-                        style={{ fontSize: "14px", fontWeight: 500 }}
-                      >
-                        Collections
-                        <ChevronDown className="h-4 w-4" />
-                      </button>
+                      <CategoriesMenu />
+                    </div>
+                    <span style={{ fontSize: "14px", fontWeight: 500 }}>
+                      <CollectionsMenu />
                     </span>
                     <nav
                       className="flex min-w-0 flex-1 items-center overflow-hidden"
@@ -367,6 +368,20 @@ export function SiteHeader() {
                 </span>
               </Link>
               <div className="flex shrink-0 items-center gap-4 text-foreground/90">
+                <Link
+                  href="/en/compare"
+                  aria-label={
+                    compare.count ? `Compare (${compare.count})` : "Compare"
+                  }
+                  className="relative flex flex-col items-center gap-1 transition-opacity hover:opacity-70"
+                >
+                  <ArrowLeftRight className="h-6 w-6" />
+                  {compare.count > 0 && (
+                    <span className="absolute -right-2 -top-1.5 grid h-[18px] min-w-[18px] place-items-center rounded-full bg-primary px-1 text-[10px] font-bold leading-none text-primary-foreground">
+                      {compare.count}
+                    </span>
+                  )}
+                </Link>
                 <button
                   type="button"
                   aria-label="Open cart"

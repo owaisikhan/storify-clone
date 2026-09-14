@@ -8,6 +8,7 @@ import { Scale, Search, X } from "lucide-react";
 import { products } from "@/data/products";
 
 import { PolicyShell } from "../en-policy/PolicyShell";
+import { COMPARE_MAX, useCompare } from "./CompareProvider";
 
 /**
  * /en/compare — "Compare Products".
@@ -17,11 +18,9 @@ import { PolicyShell } from "../en-policy/PolicyShell";
  * real here: picking products fills a comparison table drawn from the catalogue
  * snapshot.
  */
-const MAX = 4;
-
 export function CompareView() {
+  const { slugs: picked, toggle, remove, clear, full } = useCompare();
   const [query, setQuery] = useState("");
-  const [picked, setPicked] = useState<string[]>([]);
 
   const matches = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -54,7 +53,7 @@ export function CompareView() {
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search products..."
           aria-label="Search products to compare"
-          disabled={picked.length >= MAX}
+          disabled={full}
           className="h-11 w-full rounded-lg border border-border bg-transparent pl-9 pr-3 text-sm text-foreground outline-none transition-[border-color,box-shadow] placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 disabled:cursor-not-allowed disabled:opacity-60"
         />
         {matches.length > 0 && (
@@ -64,7 +63,7 @@ export function CompareView() {
                 <button
                   type="button"
                   onClick={() => {
-                    setPicked((list) => [...list, m.slug].slice(0, MAX));
+                    toggle(m.slug);
                     setQuery("");
                   }}
                   className="block w-full cursor-pointer px-4 py-2.5 text-left text-sm text-foreground transition-colors hover:bg-muted"
@@ -75,7 +74,7 @@ export function CompareView() {
             ))}
           </ul>
         )}
-        {picked.length >= MAX && (
+        {full && (
           <p className="mt-2 text-xs text-muted-foreground">
             Four products is the maximum — remove one to add another.
           </p>
@@ -93,7 +92,20 @@ export function CompareView() {
           </p>
         </div>
       ) : (
-        <div className="mt-8 overflow-x-auto">
+        <div className="mt-8">
+          <div className="mb-3 flex items-center justify-between gap-4">
+            <p className="text-sm text-muted-foreground">
+              Comparing {chosen.length} of {COMPARE_MAX}
+            </p>
+            <button
+              type="button"
+              onClick={clear}
+              className="cursor-pointer text-sm text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground"
+            >
+              Clear all
+            </button>
+          </div>
+          <div className="overflow-x-auto">
           <table className="w-full min-w-[640px] border-collapse text-sm">
             <thead>
               <tr>
@@ -122,9 +134,7 @@ export function CompareView() {
                       <button
                         type="button"
                         aria-label={`Remove ${p.name} from comparison`}
-                        onClick={() =>
-                          setPicked((list) => list.filter((s) => s !== p.slug))
-                        }
+                        onClick={() => remove(p.slug)}
                         className="shrink-0 cursor-pointer rounded-full p-1 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                       >
                         <X className="h-4 w-4" />
@@ -152,6 +162,7 @@ export function CompareView() {
               ))}
             </tbody>
           </table>
+          </div>
         </div>
       )}
     </PolicyShell>

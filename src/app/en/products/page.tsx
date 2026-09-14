@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
 import { ChevronRight } from "lucide-react";
 
 import { ProductBrowser } from "@/components/sites/storify-demo-neurolightstudio-com-36b7295b/en-products-4839c489/ProductBrowser";
@@ -43,7 +44,10 @@ export default function ProductsPage() {
           </span>
         </h1>
 
-        <ProductBrowser />
+        {/* useSearchParams needs a Suspense boundary in a static route */}
+        <Suspense fallback={null}>
+          <ProductBrowser />
+        </Suspense>
       </div>
     </div>
   );

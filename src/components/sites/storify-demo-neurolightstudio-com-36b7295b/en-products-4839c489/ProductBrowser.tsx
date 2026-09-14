@@ -1,8 +1,10 @@
 "use client";
 
+import { useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import { X } from "lucide-react";
 
+import { categoryEntries } from "@/data/categories";
 import { products } from "@/data/products";
 import { cn } from "@/lib/utils";
 
@@ -51,7 +53,16 @@ const EMPTY: FilterState = {
  * the target's "Showing 1 - 32 of 58 products".
  */
 export function ProductBrowser() {
-  const [filters, setFilters] = useState<FilterState>(EMPTY);
+  // The header's All Categories menu links here as ?category=<slug>, the way
+  // the target does, so the grid opens already filtered to that category.
+  const params = useSearchParams();
+  const initialCategory = categoryEntries.find(
+    (c) => c.slug === params.get("category"),
+  )?.label;
+
+  const [filters, setFilters] = useState<FilterState>(
+    initialCategory ? { ...EMPTY, categories: [initialCategory] } : EMPTY,
+  );
   const [sort, setSort] = useState<SortOption>("Most Popular");
   const [density, setDensity] = useState<Density>(4);
   const [page, setPage] = useState(1);
