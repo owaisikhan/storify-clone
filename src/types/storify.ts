@@ -122,3 +122,48 @@ export interface FooterColumn {
   title: string;
   links: NavLink[];
 }
+
+export interface ProductOptionValue {
+  value: string;
+  colorCode: string | null;
+}
+
+export interface ProductOption {
+  name: string;
+  visual: string | null;
+  values: ProductOptionValue[];
+}
+
+export interface ProductVariant {
+  name: string;
+  price: number | null;
+  priceLabel: string | null;
+  comparePrice: number | null;
+  compareLabel: string | null;
+  stock: number;
+  values: { option: string; value: string }[];
+}
+
+export interface ProductSpec {
+  label: string;
+  value: string;
+}
+
+/** Everything the detail page needs beyond the shared Product record. */
+export interface ProductDetail {
+  /** rich-text body as served by the site (static snapshot, rendered as HTML) */
+  description: string;
+  shortDescription: string;
+  images: string[];
+  options: ProductOption[];
+  variants: ProductVariant[];
+  specs: ProductSpec[];
+  sku: string | null;
+  category: string | null;
+  categorySlug: string | null;
+  brand: string | null;
+  brandSlug: string | null;
+  brandLogo: string | null;
+  vendor: string | null;
+  vendorSlug: string | null;
+}
