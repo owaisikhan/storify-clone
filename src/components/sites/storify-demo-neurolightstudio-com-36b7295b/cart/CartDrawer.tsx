@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Minus, Plus, ShoppingBag, Trash2, X } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -33,7 +33,6 @@ import { formatMoney, useCart } from "./CartProvider";
 export function CartDrawer() {
   const { items, count, subtotal, open, closeCart, setQuantity, remove } =
     useCart();
-  const [notice, setNotice] = useState(false);
 
   // The sheet stays mounted and parked off-canvas so opening and closing are
   // both real transitions (500ms in / 300ms out, as the target measures).
@@ -210,20 +209,13 @@ export function CartDrawer() {
             <p className="mt-1 text-xs text-muted-foreground">
               Shipping and taxes calculated at checkout.
             </p>
-            {/* No /en/checkout route exists yet, so this stays inert rather
-                than linking into a 404. */}
-            <button
-              type="button"
-              onClick={() => setNotice(true)}
-              className="mt-4 flex h-12 w-full cursor-pointer items-center justify-center rounded-lg bg-primary text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+            <Link
+              href="/en/checkout"
+              onClick={closeCart}
+              className="mt-4 flex h-12 w-full items-center justify-center rounded-lg bg-primary text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
             >
               Checkout
-            </button>
-            {notice && (
-              <p role="status" className="mt-2 text-center text-xs text-muted-foreground">
-                Checkout isn&apos;t built yet — it is the next page on the list.
-              </p>
-            )}
+            </Link>
             <button
               type="button"
               onClick={closeCart}
