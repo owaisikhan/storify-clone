@@ -4,7 +4,7 @@ import { useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import { X } from "lucide-react";
 
-import { categoryEntries } from "@/data/categories";
+import { categoryEntries, categorySlugTree } from "@/data/categories";
 import { products } from "@/data/products";
 import { cn } from "@/lib/utils";
 
@@ -75,6 +75,19 @@ export function ProductBrowser() {
     setPage(1);
   };
 
+  // Sidebar rows and the header menu both name categories that are parents in
+  // the target's tree ("Mobile Phones" holds no products itself), so a selected
+  // category matches its whole subtree — by slug, since two categories can
+  // share a label more easily than a slug.
+  const selectedSlugs = useMemo(() => {
+    const slugs = new Set<string>();
+    for (const label of filters.categories) {
+      const entry = categoryEntries.find((c) => c.label === label);
+      if (entry) for (const s of categorySlugTree(entry.slug)) slugs.add(s);
+    }
+    return slugs;
+  }, [filters.categories]);
+
   const results = useMemo(() => {
     // "Price on request" items have no price; keep them out of the price
     // comparison so they sort to the end rather than to the cheap end.
@@ -85,8 +98,7 @@ export function ProductBrowser() {
     const needle = search.toLowerCase();
     const filtered = products.filter((p) => {
       if (needle && !p.name.toLowerCase().includes(needle)) return false;
-      if (filters.categories.length && !filters.categories.includes(p.category ?? ""))
-        return false;
+      if (selectedSlugs.size && !selectedSlugs.has(p.categorySlug ?? "")) return false;
       if (filters.brands.length && !filters.brands.includes(p.brand ?? ""))
         return false;
       if (filters.availability.length === 1) {
@@ -122,7 +134,7 @@ export function ProductBrowser() {
         );
     }
     return sorted;
-  }, [filters, sort, search]);
+  }, [filters, selectedSlugs, sort, search]);
 
   const pageCount = Math.max(1, Math.ceil(results.length / PAGE_SIZE));
   const current = Math.min(page, pageCount);

@@ -93,5 +93,35 @@ export const categoryEntries: CategoryEntry[] = [
 export const getCategory = (slug: string) =>
   categoryEntries.find((c) => c.slug === slug) ?? null;
 
-export const categoryProducts = (slug: string): Product[] =>
-  products.filter((p) => p.categorySlug === slug);
+/**
+ * Parent → direct children, read off the target's own category tree
+ * (GET /api/categories returns `parentId`/`children`/`path` per node).
+ *
+ * The catalogue files every product against one leaf category, so the parents
+ * carry no products of their own: "Mobile Phones" has productCount 0 while its
+ * descendants hold 12 between them. The target resolves a parent to all of its
+ * descendants — /api/products?category=mobile-phones returns those 12 — so
+ * anything filtering by category has to do the same, or the parent rows in the
+ * header menu and the sidebar come back empty.
+ */
+const CATEGORY_CHILDREN: Record<string, string[]> = {
+  "mobile-phones": ["phones"],
+  phones: ["google", "iphone", "oneplus", "samsung", "xiaomi"],
+};
+
+/** A category's own slug plus every slug beneath it. */
+export function categorySlugTree(slug: string): string[] {
+  const out: string[] = [];
+  const walk = (s: string) => {
+    if (out.includes(s)) return;
+    out.push(s);
+    for (const child of CATEGORY_CHILDREN[s] ?? []) walk(child);
+  };
+  walk(slug);
+  return out;
+}
+
+export const categoryProducts = (slug: string): Product[] => {
+  const slugs = new Set(categorySlugTree(slug));
+  return products.filter((p) => p.categorySlug !== null && slugs.has(p.categorySlug));
+};
