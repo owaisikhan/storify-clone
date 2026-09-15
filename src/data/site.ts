@@ -27,8 +27,6 @@ export const announcement = "Free shipping on orders over $50";
 export const announcementGradient =
   "linear-gradient(90deg, #48E4FF 0%, #5570FF 53%, #C053FF 100%)";
 
-export const logo = "/images/logo-bc6d62.svg";
-
 /** Sparkle icon inside the mobile search field ("AI search"). */
 export const aiIcon = "/images/AI-Icon.png";
 

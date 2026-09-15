@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import {
@@ -22,10 +21,10 @@ import { useCart } from "../cart/CartProvider";
 import { useCompare } from "../en-account/CompareProvider";
 import { CategoriesMenu, CollectionsMenu } from "./NavMenus";
 import { SearchBox } from "./SearchBox";
+import { SiteLogo } from "./SiteLogo";
 import {
   announcement,
   announcementGradient,
-  logo,
   primaryNav,
   utilityNav,
 } from "@/data/site";
@@ -121,18 +120,7 @@ export function SiteHeader() {
                   >
                     <div className="flex flex-row flex-nowrap items-center justify-start gap-4">
                       <Link href="/en" className="flex shrink-0 items-center gap-2">
-                        <span
-                          className="relative block transition-[width] duration-200 ease-out"
-                          style={{ width: "130px" }}
-                        >
-                          <Image
-                            src={logo}
-                            alt="Vendrix"
-                            width={130}
-                            height={33}
-                            className="h-auto w-full object-contain object-left"
-                          />
-                        </span>
+                        <SiteLogo className="text-[28px]" />
                       </Link>
                     </div>
 
@@ -314,18 +302,7 @@ export function SiteHeader() {
           <div className="container mx-auto px-4 lg:hidden">
             <div className="flex items-center justify-between gap-4 py-3">
               <Link href="/en" className="flex min-w-0 shrink-0 items-center gap-2">
-                <span
-                  className="relative block h-8 overflow-hidden"
-                  style={{ width: "112px" }}
-                >
-                  <Image
-                    src={logo}
-                    alt="Vendrix"
-                    width={144}
-                    height={32}
-                    className="h-8 w-full object-contain object-left"
-                  />
-                </span>
+                <SiteLogo className="text-[22px]" />
               </Link>
               <div className="flex shrink-0 items-center gap-4 text-foreground/90">
                 <Link

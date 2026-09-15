@@ -1,13 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 
+import { SiteLogo } from "./SiteLogo";
 import {
   copyright,
   footerColumns,
   footerContact,
   footerTagline,
-  logo,
 } from "@/data/site";
 
 /** Footer: brand column + four link columns, then the copyright rule. */
@@ -18,13 +17,7 @@ export function SiteFooter() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
           <div className="space-y-4 lg:col-span-1">
             <Link href="/en" className="inline-flex items-center">
-              <Image
-                src={logo}
-                alt="Vendrix"
-                width={130}
-                height={33}
-                className="h-auto w-[130px] object-contain object-left"
-              />
+              <SiteLogo className="text-[26px]" />
             </Link>
             <p className="text-sm text-muted-foreground">{footerTagline}</p>
             <div className="space-y-2">
