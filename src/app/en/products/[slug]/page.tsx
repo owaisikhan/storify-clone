@@ -13,7 +13,7 @@ import { products } from "@/data/products";
  *
  * A handful of products are prerendered at build time; the rest render on
  * demand from the same static snapshot (dynamicParams stays on), so every
- * product link resolves. Reviews are intentionally not built yet.
+ * product link resolves.
  */
 const PRERENDERED = [
   "xiaomi-pad-8-pro",
@@ -63,7 +63,7 @@ export default async function ProductDetailPage({
         <ProductDetailView product={product} detail={detail} />
       </div>
 
-      <ProductTabs description={detail.description} specs={detail.specs} />
+      <ProductTabs slug={slug} description={detail.description} specs={detail.specs} />
 
       <RelatedProducts products={related} />
 

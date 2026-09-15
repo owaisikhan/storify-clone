@@ -5,22 +5,31 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import type { ProductSpec } from "@/types/storify";
 
+import { ProductReviews } from "./ProductReviews";
+
 /**
- * Centered tab bar under the buy box: Description · Specifications.
- * (Reviews is deliberately not built yet — see docs/research/…/PAGE_SPEC.md.)
+ * Centered tab bar under the buy box: Description · Specifications · Reviews.
  * The active tab is bold foreground; the bar sits on a full-width bottom rule.
  *
  * `description` is the site's own rich-text body from the captured API — a
  * build-time static snapshot, not user input — so it renders as HTML.
+ *
+ * Reviews are real, Supabase-backed data (see ProductReviews) — not part of
+ * the captured snapshot, since the target only ever shows a seeded
+ * rating/reviewCount pair with no way to submit one.
  */
 export function ProductTabs({
+  slug,
   description,
   specs,
 }: {
+  slug: string;
   description: string;
   specs: ProductSpec[];
 }) {
-  const tabs = specs.length ? ["Description", "Specifications"] : ["Description"];
+  const tabs = specs.length
+    ? ["Description", "Specifications", "Reviews"]
+    : ["Description", "Reviews"];
   const [active, setActive] = useState(tabs[0]);
 
   return (
@@ -57,7 +66,7 @@ export function ProductTabs({
               dangerouslySetInnerHTML={{ __html: description }}
             />
           </>
-        ) : (
+        ) : active === "Specifications" ? (
           <>
             <h2 className="mb-6 text-2xl font-bold tracking-[-0.03em] sm:text-[28px]">
               <span className="text-foreground">Specifi</span>
@@ -76,6 +85,14 @@ export function ProductTabs({
                 </div>
               ))}
             </dl>
+          </>
+        ) : (
+          <>
+            <h2 className="mb-6 text-2xl font-bold tracking-[-0.03em] sm:text-[28px]">
+              <span className="text-foreground">Revi</span>
+              <span className="text-foreground/35">ews</span>
+            </h2>
+            <ProductReviews slug={slug} />
           </>
         )}
       </div>
