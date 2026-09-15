@@ -10,7 +10,6 @@ import { ChevronDown, Search } from "lucide-react";
 import { categoryEntries } from "@/data/categories";
 import { aiIcon } from "@/data/site";
 import { products } from "@/data/products";
-import { cn } from "@/lib/utils";
 
 /**
  * Header search, measured on the target at 1440×900.
@@ -21,11 +20,16 @@ import { cn } from "@/lib/utils";
  * linking straight to the product, with a footer line
  * `Press Enter to view all results for "<q>"`.
  *
- * The "All Categories" chip opens a 240×279 scope menu (radius 6px, z-50)
- * listing All Categories plus the nine categories that carry products.
+ * The "All Categories" chip opens a 240×279 menu (radius 6px, z-50) listing
+ * All Categories plus the nine categories that carry products — verified live
+ * against the target: clicking an item navigates straight to
+ * /en/categories/<slug> (or /en/categories for "All Categories") regardless
+ * of what's typed in the search box, and the chip's own label never changes
+ * from "All Categories". It's a category-navigation shortcut parked next to
+ * the search input, not a search scope — there is no combined
+ * "search within category" state to carry into the query.
  *
- * Enter navigates to /en/products?search=<q> — the scope is appended as
- * &category=<slug> so the products page opens filtered both ways.
+ * Enter navigates to /en/products?search=<q>.
  *
  * The catalogue is a local snapshot here, so the same query runs in memory
  * instead of over the network; the limit of six and the ordering by name match.
@@ -87,7 +91,6 @@ export function SearchBox({ variant = "desktop" }: { variant?: "desktop" | "mobi
   const router = useRouter();
   const listId = useId();
   const [query, setQuery] = useState("");
-  const [scope, setScope] = useState<string | null>(null);
   const [open, setOpen] = useState(false);
   const [scopeOpen, setScopeOpen] = useState(false);
   const wrapper = useRef<HTMLDivElement>(null);
@@ -101,19 +104,12 @@ export function SearchBox({ variant = "desktop" }: { variant?: "desktop" | "mobi
       ),
     [],
   );
-  const scopeLabel =
-    scopes.find((s) => s.slug === scope)?.label ?? "All Categories";
 
   const matches = useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return [];
-    return products
-      .filter((p) => {
-        if (scope && p.categorySlug !== scope) return false;
-        return p.name.toLowerCase().includes(q);
-      })
-      .slice(0, LIMIT);
-  }, [query, scope]);
+    return products.filter((p) => p.name.toLowerCase().includes(q)).slice(0, LIMIT);
+  }, [query]);
 
   // close both popovers on outside click or Escape
   useEffect(() => {
@@ -143,10 +139,8 @@ export function SearchBox({ variant = "desktop" }: { variant?: "desktop" | "mobi
   const submit = () => {
     const q = query.trim();
     if (!q) return;
-    const params = new URLSearchParams({ search: q });
-    if (scope) params.set("category", scope);
     setOpen(false);
-    router.push(`/en/products?${params.toString()}`);
+    router.push(`/en/products?${new URLSearchParams({ search: q }).toString()}`);
   };
 
   const suggestions = open && query.trim().length > 0;
@@ -194,7 +188,7 @@ export function SearchBox({ variant = "desktop" }: { variant?: "desktop" | "mobi
               <button
                 ref={chipRef}
                 type="button"
-                aria-label={`Categories: ${scopeLabel}`}
+                aria-label="Browse categories"
                 aria-expanded={scopeOpen}
                 onClick={() => {
                   setScopeOpen((v) => !v);
@@ -202,7 +196,7 @@ export function SearchBox({ variant = "desktop" }: { variant?: "desktop" | "mobi
                 }}
                 className="flex max-w-36 cursor-pointer items-center gap-1 rounded-sm px-1 py-1 text-xs font-medium opacity-80 outline-none"
               >
-                <span className="truncate">{scopeLabel}</span>
+                <span className="truncate">All Categories</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
 
@@ -225,15 +219,10 @@ export function SearchBox({ variant = "desktop" }: { variant?: "desktop" | "mobi
                       type="button"
                       role="menuitem"
                       onClick={() => {
-                        setScope(s.slug);
                         setScopeOpen(false);
+                        router.push(s.slug ? `/en/categories/${s.slug}` : "/en/categories");
                       }}
-                      className={cn(
-                        "flex h-9 w-full cursor-pointer items-center rounded-sm px-2 text-left text-sm transition-colors hover:bg-muted",
-                        (s.slug ?? null) === scope
-                          ? "font-semibold text-foreground"
-                          : "text-muted-foreground",
-                      )}
+                      className="flex h-9 w-full cursor-pointer items-center rounded-sm px-2 text-left text-sm text-muted-foreground transition-colors hover:bg-muted"
                     >
                       {s.label}
                     </button>
@@ -336,8 +325,7 @@ export function SearchBox({ variant = "desktop" }: { variant?: "desktop" | "mobi
             </>
           ) : (
             <p className="px-4 py-6 text-center text-sm text-muted-foreground">
-              No products match &quot;{query.trim()}&quot;
-              {scope ? ` in ${scopeLabel}` : ""}.
+              No products match &quot;{query.trim()}&quot;.
             </p>
           )}
         </div>
