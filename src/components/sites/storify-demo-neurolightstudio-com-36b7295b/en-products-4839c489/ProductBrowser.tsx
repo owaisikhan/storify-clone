@@ -56,19 +56,34 @@ export function ProductBrowser() {
   // The header's All Categories menu links here as ?category=<slug>, the way
   // the target does, so the grid opens already filtered to that category.
   const params = useSearchParams();
-  const initialCategory = categoryEntries.find(
-    (c) => c.slug === params.get("category"),
-  )?.label;
+  const urlCategory =
+    categoryEntries.find((c) => c.slug === params.get("category"))?.label ?? null;
   // the header search lands here as ?search=<q>, as it does on the target
   const search = (params.get("search") ?? "").trim();
 
-  const [filters, setFilters] = useState<FilterState>(
-    initialCategory ? { ...EMPTY, categories: [initialCategory] } : EMPTY,
+  const categoryFilter = (label: string | null): FilterState =>
+    label ? { ...EMPTY, categories: [label] } : EMPTY;
+
+  const [filters, setFilters] = useState<FilterState>(() =>
+    categoryFilter(urlCategory),
   );
   const [sort, setSort] = useState<SortOption>("Most Popular");
   const [density, setDensity] = useState<Density>(4);
   const [page, setPage] = useState(1);
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  // Switching categories in the header menu is a client-side navigation to the
+  // same route, so this component stays mounted and the useState initialiser
+  // above never runs again — the URL would change while the grid kept the
+  // category it first mounted with. Re-sync during render (React's documented
+  // shape for this) rather than in an effect, so the grid never paints a frame
+  // of the previous category.
+  const [appliedCategory, setAppliedCategory] = useState(urlCategory);
+  if (urlCategory !== appliedCategory) {
+    setAppliedCategory(urlCategory);
+    setFilters(categoryFilter(urlCategory));
+    setPage(1);
+  }
 
   const update = (next: FilterState) => {
     setFilters(next);
