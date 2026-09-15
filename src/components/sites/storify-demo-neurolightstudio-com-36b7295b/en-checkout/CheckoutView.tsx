@@ -12,8 +12,9 @@ import {
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { supabase } from "@/lib/supabase/client";
 
-import { formatMoney, useCart } from "../cart/CartProvider";
+import { ensureCartId, formatMoney, useCart } from "../cart/CartProvider";
 import { Field, SelectField } from "./Field";
 import { OrderSummary } from "./OrderSummary";
 
@@ -26,10 +27,13 @@ import { OrderSummary } from "./OrderSummary";
  *   shipping  → free (its "Free shipping on orders over $50" banner)
  *   tax       → flat 8%, the rate the target returned ($216.80 on $2,710)
  *   coupons   → no real codes exist to copy, so Apply reports an invalid code
- *   card      → form-only; nothing is transmitted or stored
+ *   card      → form-only; nothing is transmitted or stored (no payment gateway
+ *               is wired up, so "Complete order" records the order, it does not
+ *               charge a card)
  *
- * `placeOrder` below is the seam for a real backend: when Supabase is wired in
- * it becomes the insert, and nothing else on this page has to change.
+ * `placeOrder` calls the `place_order` Postgres function (see
+ * supabase/migrations/0002_orders.sql), which inserts the order and its line
+ * items together so a request can't leave a half-written order behind.
  */
 
 const TAX_RATE = 0.08;
@@ -161,6 +165,8 @@ export function CheckoutView() {
   const [billingSame, setBillingSame] = useState(true);
   const [billingAddress, setBillingAddress] = useState<Address>(EMPTY_ADDRESS);
   const [placed, setPlaced] = useState<{ id: string; total: number } | null>(null);
+  const [submitting, setSubmitting] = useState(false);
+  const [placeError, setPlaceError] = useState<string | null>(null);
 
   const shipping = 0;
   const tax = useMemo(() => Math.round(subtotal * TAX_RATE * 100) / 100, [subtotal]);
@@ -177,14 +183,36 @@ export function CheckoutView() {
     (payment !== "card" ||
       Boolean(card.number && card.expiry && card.cvc && card.holder));
 
-  /**
-   * Stand-in for real order processing. Replace the body with the Supabase
-   * insert when the backend lands — the caller and the UI stay as they are.
-   */
-  const placeOrder = () => {
-    const id = `ST-${Date.now().toString(36).toUpperCase().slice(-6)}`;
-    setPlaced({ id, total });
-    clear();
+  const placeOrder = async () => {
+    setSubmitting(true);
+    setPlaceError(null);
+    try {
+      const cartId = await ensureCartId();
+      const { data, error } = await supabase.rpc("place_order", {
+        p_cart_id: cartId,
+        p_email: email,
+        p_marketing_opt_in: marketing,
+        p_payment_method: payment,
+        p_shipping: shippingAddress,
+        p_billing_same: billingSame,
+        p_billing: billingSame ? {} : billingAddress,
+        p_subtotal: subtotal,
+        p_shipping_cost: shipping,
+        p_tax: tax,
+        p_total: total,
+        p_items: items,
+      });
+      if (error) throw error;
+      const row = data?.[0] as { order_id: string; order_number: string } | undefined;
+      if (!row) throw new Error("Order was not returned");
+      setPlaced({ id: row.order_number, total });
+      clear();
+    } catch (err) {
+      console.error("checkout: failed to place order", err);
+      setPlaceError("We couldn't place your order. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (placed) {
@@ -206,8 +234,8 @@ export function CheckoutView() {
           {formatMoney(placed.total)}
         </p>
         <p className="mt-6 max-w-md text-xs text-muted-foreground">
-          Nothing was charged and no order was stored — order processing arrives
-          with the backend.
+          Your order was recorded. No card was actually charged — this clone
+          has no payment gateway wired up.
         </p>
         <Link
           href="/en/products"
@@ -243,7 +271,7 @@ export function CheckoutView() {
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        if (valid) placeOrder();
+        if (valid && !submitting) void placeOrder();
       }}
       className="mx-auto lg:grid lg:grid-cols-2"
     >
@@ -458,12 +486,16 @@ export function CheckoutView() {
             )}
           </section>
 
+          {placeError && (
+            <p className="text-sm text-red-600 dark:text-red-400">{placeError}</p>
+          )}
+
           <button
             type="submit"
-            disabled={!valid}
+            disabled={!valid || submitting}
             className="h-12 w-full cursor-pointer rounded-[10px] bg-primary text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-50"
           >
-            Complete order
+            {submitting ? "Placing order…" : "Complete order"}
           </button>
 
           <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 pt-1 text-xs text-muted-foreground">

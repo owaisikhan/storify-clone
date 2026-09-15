@@ -126,7 +126,8 @@ function write(next: CartItem[]) {
   emit();
 }
 
-async function getOrCreateCartId(): Promise<string> {
+/** the cart id checkout links an order to — mints one if this device has none yet */
+export async function ensureCartId(): Promise<string> {
   if (cartId) return cartId;
   try {
     const stored = window.localStorage.getItem(CART_ID_KEY);
@@ -158,7 +159,7 @@ function initRemote() {
   remoteInitStarted = true;
   void (async () => {
     try {
-      const id = await getOrCreateCartId();
+      const id = await ensureCartId();
       const { data, error } = await supabase
         .from("cart_items")
         .select("item_key, slug, href, name, image, price, price_label, variant_label, quantity")
@@ -175,7 +176,7 @@ function initRemote() {
 
 async function persistUpsert(item: CartItem) {
   try {
-    const id = await getOrCreateCartId();
+    const id = await ensureCartId();
     const { error } = await supabase
       .from("cart_items")
       .upsert(itemToRow(id, item), { onConflict: "cart_id,item_key" });
@@ -187,7 +188,7 @@ async function persistUpsert(item: CartItem) {
 
 async function persistRemove(key: string) {
   try {
-    const id = await getOrCreateCartId();
+    const id = await ensureCartId();
     const { error } = await supabase
       .from("cart_items")
       .delete()
@@ -201,7 +202,7 @@ async function persistRemove(key: string) {
 
 async function persistClear() {
   try {
-    const id = await getOrCreateCartId();
+    const id = await ensureCartId();
     const { error } = await supabase.from("cart_items").delete().eq("cart_id", id);
     if (error) throw error;
   } catch (err) {
