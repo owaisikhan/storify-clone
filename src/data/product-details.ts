@@ -1,4 +1,4 @@
-// Per-product detail captured from the live Storify demo API.
+// Per-product detail captured from the live Vendrix demo API.
 // Descriptions are the site's own rich-text bodies, kept in this module so the
 // listing pages don't pull them in. Generated — do not hand-edit.
 
@@ -1510,7 +1510,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": "Apple",
     "brandSlug": "apple",
     "brandLogo": "/images/apple-6176-b3717a.webp",
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "dji-air-3s-fly-more-combo-with-dji-rc-2-remote-controller": {
@@ -1531,7 +1531,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "xiaomi-pad-8-pro": {
@@ -1751,7 +1751,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": "Xioami",
     "brandSlug": "xioami",
     "brandLogo": "/images/xiaomi-1934-49986e.webp",
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "a4tech-bloody-at87-rgb-wired-mechanical-gaming-keyboard": {
@@ -1869,7 +1869,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "huawei-watch-fit-2-active": {
@@ -1951,7 +1951,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "galaxy-s25-5g": {
@@ -2625,7 +2625,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": "Samsung",
     "brandSlug": "samsung",
     "brandLogo": "/images/samsung-4680-509500.webp",
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "airpods-pro-3": {
@@ -2645,7 +2645,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": "Apple",
     "brandSlug": "apple",
     "brandLogo": "/images/apple-6176-b3717a.webp",
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "sony-computer-entertainment-cfi-zct1w-dual-sense-wireless-controller-ps5": {
@@ -2698,7 +2698,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": "Sony",
     "brandSlug": "sony",
     "brandLogo": "/images/sony-3098-c3e091.webp",
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "samsung-galaxy-s26-series-silicone-magnet-case": {
@@ -3036,7 +3036,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": "Samsung",
     "brandSlug": "samsung",
     "brandLogo": "/images/samsung-4680-509500.webp",
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "ugreen-cd317-2-in-1-wireless-charger": {
@@ -3055,7 +3055,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "panasonic-mj-cb600-large-capacity-juicer-2l": {
@@ -3075,7 +3075,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "lenovo-legion-go-gaming-handhelds": {
@@ -3140,7 +3140,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "microsoft-xbox-one-x-gaming-console": {
@@ -3159,7 +3159,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "dell-pro-15-essential-pv15255-ryzen-5-7520u-amd-radeon-graphics-156-fhd-laptop": {
@@ -3180,7 +3180,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "acer-nitro-lite-nl-16-71g-578s-intel-i5-13420h-nvidia-rtx-3050-with-6gb-graphics-16-gaming-laptop": {
@@ -3201,7 +3201,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": "Acer",
     "brandSlug": "acer",
     "brandLogo": "/images/image-601-1-522664.webp",
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "bosch-kag93ai30m-series-6-side-by-side-refrigerator-598l": {
@@ -3220,7 +3220,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "jbl-flip-7-portable-wireless-speaker": {
@@ -3359,7 +3359,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "apple-watch-ultra-2-with-ocean-band-gps-cellular": {
@@ -3441,7 +3441,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": "Apple",
     "brandSlug": "apple",
     "brandLogo": "/images/apple-6176-b3717a.webp",
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "anker-zolo-240w-usb-c-to-usb-c-braided-cable": {
@@ -3489,7 +3489,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": "Anker",
     "brandSlug": "anker",
     "brandLogo": "/images/anker-9579-c39919.webp",
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "oneplus-15r-5g": {
@@ -3651,7 +3651,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "dell-tower-qct1250-14th-gen-intel-core-i7-14700-intel-uhd-graphics-brand-pc": {
@@ -3671,7 +3671,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "macbook-pro-m5-14-inch-24gb1tb-10-core-cpu-10-core-gpu": {
@@ -3734,7 +3734,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": "Apple",
     "brandSlug": "apple",
     "brandLogo": "/images/apple-6176-b3717a.webp",
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "intel-core-ultra-9-285k-arrow-lake-processor": {
@@ -3752,7 +3752,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "msi-pro-mp275q-e14-27-wqhd-144hz-ips-gaming-monitor": {
@@ -3772,7 +3772,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "ipad-pro-m5-2025": {
@@ -4103,7 +4103,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": "Apple",
     "brandSlug": "apple",
     "brandLogo": "/images/apple-6176-b3717a.webp",
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "hp-victus-15-fa2104tx-intel-core-i7-13620h-nvidia-geforce-rtx-4050-with-6gb-graphics-156-fhd-gaming": {
@@ -4123,7 +4123,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "cheerlux-cl770-4400-lumens-androidatv-multimedia-projector": {
@@ -4142,7 +4142,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "qcy-pb20a-45w-pd-fast-charge-power-bank-20000mah": {
@@ -4161,7 +4161,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "anker-soundcore-space-q45-noise-cancelling-headphones": {
@@ -4243,7 +4243,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": "Anker",
     "brandSlug": "anker",
     "brandLogo": "/images/anker-9579-c39919.webp",
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "macbook-air-m5-15-inch": {
@@ -4580,7 +4580,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": "Apple",
     "brandSlug": "apple",
     "brandLogo": "/images/apple-6176-b3717a.webp",
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "poco-f8-ultra-5g": {
@@ -4701,7 +4701,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "iphone-15": {
@@ -4980,7 +4980,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "sony-playstation-5-slim-gaming-console": {
@@ -5045,7 +5045,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "galaxy-s26-ultra-5g": {
@@ -5324,7 +5324,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "pixel-9-pro-xl": {
@@ -5603,7 +5603,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "iphone-17": {
@@ -5882,7 +5882,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "iphone-16-pro-max": {
@@ -6161,7 +6161,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "iphone-17-pro-max": {
@@ -7033,7 +7033,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "ipad-air-m4-2026": {
@@ -7818,7 +7818,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "haier-h55m80fux-55-inch-mini-led-4k-smart-google-tv": {
@@ -7838,7 +7838,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "haier-hsu-19-gravity-inv-pro-x6-inverter-air-conditioner-1-6-ton": {
@@ -7854,7 +7854,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "insta360-go-3s": {
@@ -7935,7 +7935,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "nothing-phone-4a-pro": {
@@ -8155,7 +8155,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "cmf-by-nothing-watch-pro-2-bt-calling-smart-watch": {
@@ -8176,7 +8176,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "galaxy-watch7": {
@@ -8391,7 +8391,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": "Samsung",
     "brandSlug": "samsung",
     "brandLogo": "/images/samsung-4680-509500.webp",
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "apple-watch-se-3": {
@@ -8699,7 +8699,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "dji-osmo-pocket-3-action-camera": {
@@ -8719,7 +8719,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "dji-osmo-nano-action-camera": {
@@ -8739,7 +8739,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "dji-osmo-action-6-adventure-combo-camera": {
@@ -8759,7 +8759,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "galaxy-a57-5g": {
@@ -9038,7 +9038,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   },
   "iphone-16-pro": {
@@ -9393,7 +9393,7 @@ export const productDetails: Record<string, ProductDetail> = {
     "brand": null,
     "brandSlug": null,
     "brandLogo": null,
-    "vendor": "Storify",
+    "vendor": "Vendrix",
     "vendorSlug": "main-store"
   }
 };

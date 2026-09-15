@@ -5,7 +5,7 @@ import { VendorCard } from "@/components/sites/storify-demo-neurolightstudio-com
 import { vendorProducts, vendorStores } from "@/data/vendors";
 
 export const metadata: Metadata = {
-  title: "Vendors | Storify",
+  title: "Vendors | Vendrix",
   description: "Discover every store selling on our marketplace.",
 };
 

@@ -8,7 +8,7 @@ const SLUG = "accessibility";
 
 export function generateMetadata(): Metadata {
   const policy = getStubPolicy(SLUG);
-  return { title: `${policy?.title ?? "Storify"} | Storify`, description: policy?.body };
+  return { title: `${policy?.title ?? "Vendrix"} | Vendrix`, description: policy?.body };
 }
 
 /**

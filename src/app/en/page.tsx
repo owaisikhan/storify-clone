@@ -15,7 +15,7 @@ import { TopVendors } from "@/components/sites/storify-demo-neurolightstudio-com
 import { WideBanner } from "@/components/sites/storify-demo-neurolightstudio-com-36b7295b/en-7a4ba3ba/WideBanner";
 
 export const metadata: Metadata = {
-  title: "Storify",
+  title: "Vendrix",
   description: "Multi-vendor E-commerce Platform",
 };
 

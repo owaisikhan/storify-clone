@@ -15,8 +15,8 @@ import { cn } from "@/lib/utils";
  */
 
 const DEMO_ROLES = [
-  { role: "Admin", email: "admin@storify.com", password: "Admin@123" },
-  { role: "Vendor", email: "vendor@storify.com", password: "Vendor@123" },
+  { role: "Admin", email: "admin@vendrix.com", password: "Admin@123" },
+  { role: "Vendor", email: "vendor@vendrix.com", password: "Vendor@123" },
 ];
 
 const FIELD =

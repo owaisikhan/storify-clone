@@ -6,8 +6,8 @@ import { ChevronRight } from "lucide-react";
 import { ProductBrowser } from "@/components/sites/storify-demo-neurolightstudio-com-36b7295b/en-products-4839c489/ProductBrowser";
 
 export const metadata: Metadata = {
-  title: "Storify",
-  description: "Shop all products on Storify.",
+  title: "Vendrix",
+  description: "Shop all products on Vendrix.",
 };
 
 /**

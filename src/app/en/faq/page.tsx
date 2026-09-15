@@ -5,7 +5,7 @@ import { PolicyShell } from "@/components/sites/storify-demo-neurolightstudio-co
 import { faq } from "@/data/policies";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | Storify",
+  title: "Frequently Asked Questions | Vendrix",
   description: faq.intro,
 };
 

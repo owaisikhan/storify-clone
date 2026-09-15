@@ -20,7 +20,7 @@ export function SiteFooter() {
             <Link href="/en" className="inline-flex items-center">
               <Image
                 src={logo}
-                alt="Storify"
+                alt="Vendrix"
                 width={130}
                 height={33}
                 className="h-auto w-[130px] object-contain object-left"

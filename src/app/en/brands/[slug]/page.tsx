@@ -22,10 +22,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const brand = getBrand(slug);
-  if (!brand) return { title: "Brand not found | Storify" };
+  if (!brand) return { title: "Brand not found | Vendrix" };
   return {
-    title: `${brand.name} | Storify`,
-    description: brand.description ?? `Shop ${brand.name} products on Storify.`,
+    title: `${brand.name} | Vendrix`,
+    description: brand.description ?? `Shop ${brand.name} products on Vendrix.`,
   };
 }
 

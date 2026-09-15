@@ -8,7 +8,7 @@ import { collectionEntries } from "@/data/collections";
 import { products } from "@/data/products";
 
 export const metadata: Metadata = {
-  title: "Collections | Storify",
+  title: "Collections | Vendrix",
   description: "Browse our curated collections.",
 };
 

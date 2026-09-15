@@ -25,7 +25,7 @@ import { products } from "@/data/products";
 import { cn } from "@/lib/utils";
 
 /**
- * /en/about — "About Storify".
+ * /en/about — "About Vendrix".
  *
  * Copy is the target's, verbatim. Its two counters are live figures ("Counted
  * from live catalogue and order data."), so "Products listed" is derived from
@@ -124,13 +124,13 @@ const REVIEWS = [
     stars: 5,
     title: "hhhhhhhhhhhhhhhhh",
     body: "hhhhhhhhhhhhhhhhhhhhh",
-    author: "Storify Admin",
+    author: "Vendrix Admin",
   },
   {
     stars: 4,
     title: "thanks I reccived",
     body: null,
-    author: "Storify Admin",
+    author: "Vendrix Admin",
   },
 ];
 
@@ -140,7 +140,7 @@ const CONTACT = [
     title: "Head Office",
     body: "123 Main Street, New York, NY 10001",
   },
-  { Icon: Mail, title: "Email Us", body: "support@storify.com" },
+  { Icon: Mail, title: "Email Us", body: "support@vendrix.com" },
   { Icon: Phone, title: "Call Us", body: "+1 555-0100" },
   {
     Icon: Clock,
@@ -204,14 +204,14 @@ export function AboutView() {
             <div>
               <span className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
                 <Store className="h-3.5 w-3.5" />
-                About Storify
+                About Vendrix
               </span>
               <h1 className="mt-3 max-w-[16ch] text-4xl font-bold leading-[1.1] tracking-tight text-foreground md:text-5xl">
                 Independent sellers. One checkout you can trust.
               </h1>
               <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
                 Verified independent sellers list their own products and ship to
-                you directly. Storify handles payment, tracking and returns, so
+                you directly. Vendrix handles payment, tracking and returns, so
                 ordering from a two-person workshop is as safe as ordering from a
                 warehouse.
               </p>
@@ -221,7 +221,7 @@ export function AboutView() {
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link href="/en/vendors" className={GHOST_BUTTON}>
-                  Sell on Storify
+                  Sell on Vendrix
                 </Link>
               </div>
             </div>
@@ -271,7 +271,7 @@ export function AboutView() {
       <section className="bg-muted/40 py-14">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold tracking-tight text-foreground md:text-3xl">
-            How Storify works
+            How Vendrix works
           </h2>
           <p className="mt-2 text-[15px] text-muted-foreground">
             Two sides of one marketplace.
@@ -326,7 +326,7 @@ export function AboutView() {
             What we stand for
           </h2>
           <p className="mt-2 max-w-2xl text-[15px] text-muted-foreground">
-            Storify exists so a one-person workshop can sell on the same terms as
+            Vendrix exists so a one-person workshop can sell on the same terms as
             a warehouse.
           </p>
           <div className="mt-8 grid gap-6 rounded-xl border border-border p-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -348,10 +348,10 @@ export function AboutView() {
       <section className="bg-muted/40 py-14">
         <div className="container mx-auto px-4 [&_p]:max-w-3xl">
           <h2 className="text-2xl font-bold tracking-tight text-foreground md:text-3xl">
-            How Storify started
+            How Vendrix started
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
-            Storify started with a simple observation: good products were sitting
+            Vendrix started with a simple observation: good products were sitting
             in small workshops with no way to reach anyone beyond their own
             street.
           </p>
@@ -362,7 +362,7 @@ export function AboutView() {
             handled once, for everyone.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
-            Every seller on Storify runs their own shop. We keep the lights on.
+            Every seller on Vendrix runs their own shop. We keep the lights on.
           </p>
         </div>
       </section>
@@ -450,7 +450,7 @@ export function AboutView() {
             Ready when you are
           </h2>
           <p className="mt-2 text-[15px] opacity-90">
-            Browse the catalogue, or open a store of your own on Storify.
+            Browse the catalogue, or open a store of your own on Vendrix.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
             <Link
@@ -464,7 +464,7 @@ export function AboutView() {
               href="/en/vendors"
               className="text-sm font-semibold underline underline-offset-4 transition-opacity hover:opacity-80"
             >
-              Sell on Storify
+              Sell on Vendrix
             </Link>
           </div>
         </div>

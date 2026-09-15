@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { CheckoutView } from "@/components/sites/storify-demo-neurolightstudio-com-36b7295b/en-checkout/CheckoutView";
 
 export const metadata: Metadata = {
-  title: "Checkout | Storify",
-  description: "Complete your Storify order.",
+  title: "Checkout | Vendrix",
+  description: "Complete your Vendrix order.",
   robots: { index: false, follow: false },
 };
 

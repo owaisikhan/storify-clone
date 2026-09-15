@@ -4,7 +4,7 @@ import { ReturnsPolicy } from "@/components/sites/storify-demo-neurolightstudio-
 import { returnsPolicy } from "@/data/policies";
 
 export const metadata: Metadata = {
-  title: "Return and Refund Policy | Storify",
+  title: "Return and Refund Policy | Vendrix",
   description: returnsPolicy.intro,
 };
 

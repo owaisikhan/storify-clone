@@ -24,9 +24,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const vendor = getVendor(slug);
-  if (!vendor) return { title: "Store not found | Storify" };
+  if (!vendor) return { title: "Store not found | Vendrix" };
   return {
-    title: `${vendor.name} | Storify`,
+    title: `${vendor.name} | Vendrix`,
     description: vendor.description,
   };
 }

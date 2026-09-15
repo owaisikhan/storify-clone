@@ -6,7 +6,7 @@ import { ArrowRight, ChevronRight, Home } from "lucide-react";
 import { brandEntries, brandProducts } from "@/data/brands";
 
 export const metadata: Metadata = {
-  title: "Brands | Storify",
+  title: "Brands | Vendrix",
   description: "Browse products by your favorite brands.",
 };
 

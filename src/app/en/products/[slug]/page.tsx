@@ -35,9 +35,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const product = products.find((p) => p.slug === slug);
-  if (!product) return { title: "Storify" };
+  if (!product) return { title: "Vendrix" };
   return {
-    title: `${product.name} | Storify`,
+    title: `${product.name} | Vendrix`,
     description:
       productDetails[slug]?.shortDescription || "Multi-vendor E-commerce Platform",
   };

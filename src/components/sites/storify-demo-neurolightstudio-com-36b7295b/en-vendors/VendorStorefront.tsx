@@ -350,7 +350,7 @@ export function VendorStorefront({
                 <p className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Store className="h-4 w-4" />
                   {vendor.name} sells {products.length} product
-                  {products.length === 1 ? "" : "s"} on Storify from{" "}
+                  {products.length === 1 ? "" : "s"} on Vendrix from{" "}
                   {vendor.location}.
                 </p>
               </div>

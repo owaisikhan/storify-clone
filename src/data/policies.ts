@@ -65,7 +65,7 @@ export const returnsPolicy = {
   eyebrow: "Returns and refunds",
   title: "Return and Refund Policy",
   intro:
-    "We want every Storify order to feel clear after checkout. This page explains when items can be returned, how refund reviews work, and what happens after an approved return reaches us.",
+    "We want every Vendrix order to feel clear after checkout. This page explains when items can be returned, how refund reviews work, and what happens after an approved return reaches us.",
   window: {
     label: "Return window",
     value: "30 days from delivery",
@@ -160,7 +160,7 @@ export const returnsPolicy = {
     title: "Before sending anything back",
     body: "Please wait for approval and return instructions. Items sent back without approval can take longer to identify and may not qualify for refund processing.",
     helpTitle: "Need help?",
-    email: "support@storify.com",
+    email: "support@vendrix.com",
     phone: "+1 555-0100",
   },
   cta: {

@@ -127,7 +127,7 @@ export function SiteHeader() {
                         >
                           <Image
                             src={logo}
-                            alt="Storify"
+                            alt="Vendrix"
                             width={130}
                             height={33}
                             className="h-auto w-full object-contain object-left"
@@ -320,7 +320,7 @@ export function SiteHeader() {
                 >
                   <Image
                     src={logo}
-                    alt="Storify"
+                    alt="Vendrix"
                     width={144}
                     height={32}
                     className="h-8 w-full object-contain object-left"

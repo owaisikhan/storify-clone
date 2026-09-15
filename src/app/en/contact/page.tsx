@@ -6,7 +6,7 @@ import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { ContactForm } from "@/components/sites/storify-demo-neurolightstudio-com-36b7295b/en-contact/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Storify",
+  title: "Contact Us | Vendrix",
   description:
     "Have a question about an order, product, vendor, or account? Our team is ready to help.",
 };
@@ -16,7 +16,7 @@ const MAPS_QUERY = encodeURIComponent(ADDRESS);
 
 const DETAILS = [
   { Icon: MapPin, title: "Head Office", body: ADDRESS },
-  { Icon: Mail, title: "Email Us", body: "support@storify.com" },
+  { Icon: Mail, title: "Email Us", body: "support@vendrix.com" },
   { Icon: Phone, title: "Call Us", body: "+1 555-0100" },
   {
     Icon: Clock,

@@ -24,7 +24,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Storify",
+  title: "Vendrix",
   description: "Multi-vendor E-commerce Platform",
 };
 

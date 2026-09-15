@@ -21,10 +21,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const category = getCategory(slug);
-  if (!category) return { title: "Category not found | Storify" };
+  if (!category) return { title: "Category not found | Vendrix" };
   return {
-    title: `${category.label} | Storify`,
-    description: `Shop ${category.label} on Storify.`,
+    title: `${category.label} | Vendrix`,
+    description: `Shop ${category.label} on Vendrix.`,
   };
 }
 

@@ -25,11 +25,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const collection = getCollection(slug);
-  if (!collection) return { title: "Collection not found | Storify" };
+  if (!collection) return { title: "Collection not found | Vendrix" };
   return {
-    title: `${collection.name} | Storify`,
+    title: `${collection.name} | Vendrix`,
     description:
-      collection.description ?? `Shop the ${collection.name} collection on Storify.`,
+      collection.description ?? `Shop the ${collection.name} collection on Vendrix.`,
   };
 }
 

@@ -420,8 +420,8 @@ export const articles: Article[] = [
     image: "/images/chatgpt-image-aug-30-2026-06-40-28-pm-fe169d.webp",
     excerpt:
       "Discover must-have gadgets that boost productivity and comfort in your home office, from ergonomic accessories to smart devices for any remote worker.",
-    author: "Storify Admin",
-    avatar: "/images/naziullah-mini-c772ef.webp",
+    author: "Vendrix Admin",
+    avatar: null,
     date: "Aug 30, 2026",
   },
   {
@@ -430,8 +430,8 @@ export const articles: Article[] = [
     image: "/images/chatgpt-image-aug-30-2026-06-10-33-pm-8722aa.webp",
     excerpt:
       "Discover must-have electronics accessories that enhance your tech experience, from chargers to protective cases.",
-    author: "Storify Admin",
-    avatar: "/images/naziullah-mini-c772ef.webp",
+    author: "Vendrix Admin",
+    avatar: null,
     date: "Aug 30, 2026",
   },
   {
@@ -440,8 +440,8 @@ export const articles: Article[] = [
     image: "/images/chatgpt-image-aug-30-2026-04-45-55-pm-f25b9d.webp",
     excerpt:
       "Discover the top smartphones to buy in 2026, featuring the latest tech innovations and ideal choices for every shopper's needs.",
-    author: "Storify Admin",
-    avatar: "/images/naziullah-mini-c772ef.webp",
+    author: "Vendrix Admin",
+    avatar: null,
     date: "Aug 30, 2026",
   },
   {
@@ -481,7 +481,7 @@ export const footerTagline = "Multi-vendor E-commerce Platform";
 export const footerContact = {
   title: "Contact",
   phone: "+1 555-0100",
-  email: "support@storify.com",
+  email: "support@vendrix.com",
   address: "123 Main Street, New York, NY 10001",
 };
 
@@ -524,4 +524,4 @@ export const footerColumns: FooterColumn[] = [
   },
 ];
 
-export const copyright = "© 2026 Storify. All rights reserved.";
+export const copyright = "© 2026 Vendrix. All rights reserved.";
