@@ -463,6 +463,34 @@
   --accent: var(--store-d-accent);
   --destructive: var(--store-d-sale);
 }
+
+/* The sticky header carries its own chrome tokens rather than the page's: the
+   target's header is white while the page behind it is off-white. Those values
+   were captured as inline custom properties on the element, which no rule can
+   override, so the header stayed white in dark mode while its text turned
+   light — unreadable. Same light values here, plus the dark counterpart. */
+.storefront-header {
+  --background: #ffffff;
+  --foreground: #111827;
+  --muted-foreground: #111827;
+}
+.dark .storefront-header {
+  --background: var(--store-d-surface);
+  --foreground: var(--store-d-text);
+  --muted-foreground: var(--store-d-text-muted);
+}
+
+/* The nav row under the search bar paints its own surface, captured inline the
+   same way and with the same result. */
+.storefront-navrow {
+  background-color: #ffffff;
+  color: #111827;
+}
+.dark .storefront-navrow {
+  background-color: var(--store-d-surface);
+  color: var(--store-d-text);
+}
+
 .store-surface .container {
   max-width: min(100%, var(--store-page-width, 1440px));
   padding-inline: var(--store-page-padding, 1rem);

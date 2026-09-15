@@ -8,6 +8,7 @@ import { CompareProvider } from "@/components/sites/storify-demo-neurolightstudi
 import { WishlistProvider } from "@/components/sites/storify-demo-neurolightstudio-com-36b7295b/en-account/WishlistProvider";
 import { SiteFooter } from "@/components/sites/storify-demo-neurolightstudio-com-36b7295b/shared/SiteFooter";
 import { SiteHeader } from "@/components/sites/storify-demo-neurolightstudio-com-36b7295b/shared/SiteHeader";
+import { THEME_STORAGE_KEY } from "@/lib/theme";
 
 // Target site loads Inter as its body/heading family and Geist Mono for the
 // coupon code chip (computed font-family: inter, "inter Fallback").
@@ -42,8 +43,22 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${inter.variable} ${geistMono.variable} h-full antialiased`}
+      // the pre-paint script below sets .dark on this element before React
+      // hydrates, so its class list legitimately differs from the server's
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
+        {/*
+          Applies the saved theme before the first paint. It has to be inline
+          and synchronous — anything deferred to a component would render one
+          frame of the wrong palette first. Falls back to the OS setting until
+          the visitor picks a side (see ThemeToggle).
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var c=localStorage.getItem(${JSON.stringify(THEME_STORAGE_KEY)});if(c?c==="dark":matchMedia("(prefers-color-scheme: dark)").matches){document.documentElement.classList.add("dark")}}catch(e){}`,
+          }}
+        />
         <div className="min-h-screen">
           <div
             className="store-surface flex min-h-screen flex-col bg-background"

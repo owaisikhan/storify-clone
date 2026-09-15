@@ -8,7 +8,6 @@ import {
   Heart,
   MapPin,
   Menu as MenuIcon,
-  Moon,
   Package,
   Rss,
   House,
@@ -22,6 +21,7 @@ import { useCompare } from "../en-account/CompareProvider";
 import { CategoriesMenu, CollectionsMenu } from "./NavMenus";
 import { SearchBox } from "./SearchBox";
 import { SiteLogo } from "./SiteLogo";
+import { ThemeToggle } from "./ThemeToggle";
 import {
   announcement,
   announcementGradient,
@@ -86,14 +86,12 @@ export function SiteHeader() {
 
       <div className="sticky top-0 z-50 w-full">
         <header
-          className="w-full bg-background shadow-[0_2px_10px_rgba(15,23,42,0.06)] [&_button]:cursor-pointer dark:shadow-[0_2px_10px_rgba(0,0,0,0.35)]"
-          style={
-            {
-              "--background": "#ffffff",
-              "--foreground": "#111827",
-              "--muted-foreground": "#111827",
-            } as React.CSSProperties
-          }
+          // The captured light chrome (#ffffff / #111827) used to be pinned here
+          // as inline custom properties, which nothing can override — the header
+          // stayed white in dark mode while its text went light. The same tokens
+          // now live on .storefront-header in globals.css, which has a dark
+          // counterpart.
+          className="storefront-header w-full bg-background shadow-[0_2px_10px_rgba(15,23,42,0.06)] [&_button]:cursor-pointer dark:shadow-[0_2px_10px_rgba(0,0,0,0.35)]"
         >
           {/* desktop */}
           <div className="hidden lg:block">
@@ -144,13 +142,7 @@ export function SiteHeader() {
 
                     <div className="flex flex-row flex-nowrap items-center justify-end gap-5">
                       <div className="flex shrink-0 items-center gap-4">
-                        <button
-                          type="button"
-                          aria-label="Switch to dark mode"
-                          className="relative flex shrink-0 items-center transition-opacity hover:opacity-70"
-                        >
-                          <Moon className="h-5 w-5" />
-                        </button>
+                        <ThemeToggle />
                         <Link
                           href="/en/account/wishlist"
                           aria-label="Wishlist"
@@ -213,13 +205,10 @@ export function SiteHeader() {
               </div>
             </div>
 
-            {/* nav row — stays visible when the search row collapses */}
-            <div
-              style={{
-                backgroundColor: "#ffffff",
-                color: "#111827",
-              }}
-            >
+            {/* nav row — stays visible when the search row collapses. Its
+                captured colours were inline too, so it kept painting white
+                under the themed header; see .storefront-navrow. */}
+            <div className="storefront-navrow">
               <div className="container mx-auto px-4">
                 <div
                   className="py-2"
